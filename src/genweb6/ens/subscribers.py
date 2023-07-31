@@ -1,0 +1,43 @@
+# -*- coding: utf-8 -*-
+
+from Products.CMFPlone.interfaces.constrains import ISelectableConstrainTypes
+
+from plone.dexterity.utils import createContentInContainer
+
+from genweb6.ens.indicators.updating import update as update_indicators
+from genweb6.ens.indicators.updating import update_if_review_state as update_indicators_if_review_state
+
+
+def create_folder(container, id, title, addable_types):
+    folder = createContentInContainer(
+        container,
+        "Folder",
+        id=id,
+        title=title,
+        exclude_from_nav=True)
+    folder_constraints = ISelectableConstrainTypes(folder)
+    folder_constraints.setConstrainTypesMode(1)
+    folder_constraints.setLocallyAllowedTypes(addable_types)
+    folder_constraints.setImmediatelyAddableTypes(addable_types)
+
+
+def initialize_ens(ens, event):
+    create_folder(
+        ens,
+        "altres-documents",
+        "Altres documents",
+        ('Document', 'File', 'Folder', 'Image', 'genweb6.ens.document_interes'))
+
+    create_folder(
+        ens,
+        "reunions",
+        "Reunions",
+        ('Document', 'File', 'Folder', 'Image', 'genweb6.ens.acta_reunio'))
+
+
+def update_indicators_on_ens_deletion(obj, event):
+    update_indicators_if_review_state(obj, ('intranet', 'published'))
+
+
+def update_indicators_on_ens_review_state_change(obj, event):
+    update_indicators(context=obj)

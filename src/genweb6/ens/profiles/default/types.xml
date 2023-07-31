@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<object name="portal_types" meta_type="Plone Types Tool">
+
+    <object meta_type="Dexterity FTI" name="genweb.ens.acord"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.acta_reunio"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.carrec"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.carrec_upc"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.contenidor_ens"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.contenidor_representants"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.conveni"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.document_interes"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.documentacio"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.ens"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.escriptura_publica"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.estatut"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.organ"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.persona_contacte"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.persona_directiu"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.representant"/>
+    <object meta_type="Dexterity FTI" name="genweb.ens.unitat"/>
+
+</object>

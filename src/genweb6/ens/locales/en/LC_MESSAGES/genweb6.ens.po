@@ -1,0 +1,487 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"PO-Revision-Date: 2022-05-09 10:00+0100\n"
+"Last-Translator: \n"
+"Language-Team: Plone Team@ENSnet <plone.team@ensnet.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: genweb6.ens\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: en\n"
+
+#: ../content/ens/ens.py:284
+msgid "% UPC en capital"
+msgstr ""
+
+#: ../content/ens/ens.py:303
+msgid "% UPC en vots"
+msgstr ""
+
+#: ../content/ens/ens.py:214
+msgid "1. Al capital social o fons patrimonial"
+msgstr ""
+
+#: ../content/ens/ens.py:290
+msgid "2. A òrgan de govern superior"
+msgstr ""
+
+#: ../content/ens/ens.py:251
+msgid "3. Quota anual"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.acord.xml
+msgid "Acord UPC"
+msgstr ""
+
+#: ../content/ens/ens.py:364
+msgid "Acord d'alta"
+msgstr ""
+
+#: ../content/ens/ens.py:378
+msgid "Acord de baixa"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.acord.xml
+msgid "Acord legal associat a un organ de govern"
+msgstr ""
+
+#: ../content/ens/ens.py:73
+msgid "Acrònim"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.acta_reunio.xml
+msgid "Acta de reunio"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.acta_reunio.xml
+msgid "Acta de reunio associada a un ens"
+msgstr ""
+
+#: ../content/ens/ens.py:30
+msgid "Actiu"
+msgstr ""
+
+#: ../content/ens/ens.py:402
+msgid "Adm. Pública d'adscripció"
+msgstr ""
+
+#: ../content/ens/ens.py:127
+msgid "Adreça 2"
+msgstr ""
+
+#: ../content/ens/ens.py:229
+msgid "Aportació inicial UPC"
+msgstr ""
+
+#: ../content/ens/ens.py:39
+msgid "Autonòmica"
+msgstr ""
+
+#: ../content/carrec_upc/carrec_upc.py:49
+msgid "Cal que introduïu cognoms i nom"
+msgstr ""
+
+#: ../content/ens/ens.py:241
+msgid "Capital inicial total"
+msgstr ""
+
+#: ../content/persona/persona.py:29
+msgid "Carrec"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.carrec_upc.xml
+msgid "Carrec UPC"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.carrec.xml
+msgid "Carrec altres org."
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.carrec_upc.xml
+msgid "Carrec associat a un organ d'UPC"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.carrec.xml
+msgid "Carrec associat a un organ d'un ens que no es UPC"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.persona_directiu.xml
+msgid "Carrec directiu"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.persona_directiu.xml
+msgid "Carrec directiu d'un ens"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.representant.xml
+msgid "Carrec que pot representar UPC en algun ens"
+msgstr ""
+
+#: ../content/ens/ens.py:171
+msgid "Codi UPC"
+msgstr ""
+
+#: ../content/carrec/carrec.py:24
+#: ../content/carrec_upc/carrec_upc.py:68
+#: ../content/persona/persona.py:17
+msgid "Cognoms i nom"
+msgstr ""
+
+#: ../content/representant/representant.py:34
+msgid "Col·lectiu"
+msgstr ""
+
+#: ../content/organ/organ.py:38
+msgid "Composició"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.contenidor_ens.xml
+msgid "Contenidor d'ens"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.contenidor_representants.xml
+msgid "Contenidor de representants"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.conveni.xml
+msgid "Conveni"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.conveni.xml
+msgid "Conveni legal associat a un ens"
+msgstr ""
+
+#: ../content/carrec/carrec.py:34
+msgid "Càrrec a l'entitat"
+msgstr ""
+
+#: ../content/persona/persona.py:24
+msgid "DNI"
+msgstr ""
+
+#: ../content/document_legal/document_legal.py:28
+#: ../content/ens/ens.py:233
+msgid "Data"
+msgstr ""
+
+#: ../content/ens/ens.py:359
+msgid "Data d'alta UPC"
+msgstr ""
+
+#: ../content/carrec/carrec.py:38
+msgid "Data d'inici"
+msgstr ""
+
+#: ../content/ens/ens.py:373
+msgid "Data de baixa UPC"
+msgstr ""
+
+#: ../content/ens/ens.py:355
+msgid "Data de constitució"
+msgstr ""
+
+#: ../content/carrec/carrec.py:46
+msgid "Data de fi"
+msgstr ""
+
+#: ../content/ens/ens.py:67
+msgid "Denominació completa"
+msgstr ""
+
+#: ../content/ens/ens.py:224
+msgid "Desconeguda"
+msgstr ""
+
+#: ../content/contenidor/contenidor.py:18
+#: ../content/document_legal/document_legal.py:24
+#: ../content/ens/ens.py:79
+msgid "Descripció"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.document_interes.xml
+msgid "Document d'interes"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.document_interes.xml
+msgid "Document d'interes legal associat a un ens"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.escriptura_publica.xml
+msgid "Document public"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.escriptura_publica.xml
+msgid "Document públic associat a un ens"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.documentacio.xml
+msgid "Documentacio"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.documentacio.xml
+msgid "Documentacio associada a un carrec"
+msgstr ""
+
+#: ../content/ens/ens.py:122
+msgid "Domicili social (adreça)"
+msgstr ""
+
+#: ../content/ens/ens.py:117
+msgid "Domicili social (població)"
+msgstr ""
+
+#: ../content/persona_contacte/persona_contacte.py:26
+msgid "Email"
+msgstr ""
+
+#: ../content/carrec/carrec.py:29
+msgid "En virtud del seu càrrec de:"
+msgstr ""
+
+#: ../content/carrec/carrec.py:19
+#: ../content/carrec_upc/carrec_upc.py:60
+#: ../profiles/default/types/genweb.ens.ens.xml
+msgid "Ens"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.ens.xml
+msgid "Entitat u organitzacio com ara una universitat o una empresa"
+msgstr ""
+
+#: ../content/ens/ens.py:351
+msgid "Entitats actuals"
+msgstr ""
+
+#: ../content/ens/ens.py:346
+msgid "Entitats constituents"
+msgstr ""
+
+#: ../content/persona/persona.py:18
+msgid "Escriu amb el format: Cognoms, Nom"
+msgstr ""
+
+#: ../content/ens/ens.py:89
+msgid "Estat"
+msgstr ""
+
+#: ../content/ens/ens.py:38
+msgid "Estatal"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.estatut.xml
+msgid "Estatuts"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.estatut.xml
+msgid "Estatuts associats a un ens"
+msgstr ""
+
+#: ../content/ens/ens.py:183
+msgid "Etiquetes"
+msgstr ""
+
+#: ../content/ens/ens.py:137
+msgid "Fax"
+msgstr ""
+
+#: ../content/ens/ens.py:105
+msgid "Figura jurídica"
+msgstr ""
+
+#: ../content/document_legal/document_legal.py:32
+msgid "Fitxer"
+msgstr ""
+
+#: ../content/ens/ens.py:322
+msgid "Fons patrimonial"
+msgstr ""
+
+#: ../content/carrec/carrec.py:50
+#: ../content/organ/organ.py:49
+#: ../content/persona_directiu/persona_directiu.py:17
+msgid "Històric"
+msgstr ""
+
+#: ../content/ens/ens.py:266
+msgid "Import"
+msgstr ""
+
+#: ../content/ens/ens.py:220
+msgid "Import UPC"
+msgstr ""
+
+#: ../configure.zcml:20
+msgid "Installs the genweb6.ens add-on."
+msgstr ""
+
+#: ../content/ens/ens.py:299
+msgid "Membres UPC als òrgans de govern"
+msgstr ""
+
+#: ../content/ens/ens.py:294
+msgid "Membres totals"
+msgstr ""
+
+#: ../content/ens/ens.py:237
+msgid "Moneda"
+msgstr ""
+
+#: ../content/ens/ens.py:95
+msgid "NIF"
+msgstr ""
+
+#: ../content/ens/ens.py:223
+msgid "No"
+msgstr ""
+
+#: ../content/contenidor/contenidor.py:13
+#: ../content/organ/organ.py:27
+#: ../content/unitat/unitat.py:19
+msgid "Nom"
+msgstr ""
+
+#: ../content/carrec/carrec.py:55
+msgid "Nomenaments anteriors"
+msgstr ""
+
+#: ../content/escriptura_publica/escriptura_publica.py:19
+msgid "Notari"
+msgstr ""
+
+#: ../content/ens/ens.py:176
+msgid "Núm."
+msgstr ""
+
+#: ../content/ens/ens.py:112
+msgid "Número d'identificació"
+msgstr ""
+
+#: ../content/ens/ens.py:84
+msgid "Objecte social"
+msgstr ""
+
+#: ../content/carrec/carrec.py:59
+#: ../content/ens/ens.py:188
+#: ../content/unitat/unitat.py:30
+msgid "Observacions"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.organ.xml
+msgid "Organ"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.organ.xml
+msgid "Organ associat a un ens"
+msgstr ""
+
+#: ../content/ens/ens.py:313
+msgid "Participació en capital social o fons patrimonial"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.persona_contacte.xml
+msgid "Persona de contacte"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.persona_contacte.xml
+msgid "Persona de contacte d'un ens"
+msgstr ""
+
+#: ../content/unitat/unitat.py:25
+msgid "Persona de referència"
+msgstr ""
+
+#: ../content/ens/ens.py:369
+msgid "Procediment d'alta"
+msgstr ""
+
+#: ../content/ens/ens.py:383
+msgid "Procediment de baixa"
+msgstr ""
+
+#: ../content/document_legal/document_legal.py:33
+msgid "Puja un fitxer"
+msgstr ""
+
+#: ../content/ens/ens.py:257
+msgid "Quota"
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.representant.xml
+msgid "Representant UPC"
+msgstr ""
+
+#: ../content/ens/ens.py:397
+msgid "Seu social a l'estranger"
+msgstr ""
+
+#: ../content/ens/ens.py:222
+msgid "Sí"
+msgstr ""
+
+#: ../content/ens/ens.py:132
+#: ../content/persona_contacte/persona_contacte.py:19
+msgid "Telèfon"
+msgstr ""
+
+#: ../content/ens/ens.py:146
+msgid "Tipologia UPC"
+msgstr ""
+
+#: ../content/organ/organ.py:42
+msgid "Tipus"
+msgstr ""
+
+#: ../content/document_legal/document_legal.py:18
+msgid "Títol"
+msgstr ""
+
+#: ../configure.zcml:29
+msgid "Uninstalls the genweb6.ens add-on."
+msgstr ""
+
+#: ../profiles/default/types/genweb.ens.unitat.xml
+msgid "Unitat UPC"
+msgstr ""
+
+#: ../content/ens/ens.py:280
+msgid "Unitat de càrrec"
+msgstr ""
+
+#: ../content/estatut/estatut.py:17
+msgid "Vigent"
+msgstr ""
+
+#: ../content/carrec/carrec.py:42
+msgid "Vigència"
+msgstr ""
+
+#: ../content/ens/ens.py:142
+msgid "Web"
+msgstr ""
+
+#: ../configure.zcml:20
+msgid "genweb6.ens"
+msgstr ""
+
+#: ../configure.zcml:29
+msgid "genweb6.ens (uninstall)"
+msgstr ""
+
+#: ../content/ens/ens.py:100
+msgid "Àmbit institucional"
+msgstr ""
+
+#: ../content/ens/ens.py:387
+msgid "Àmbit legislatiu"
+msgstr ""
+
+#: ../content/acord/acord.py:18
+msgid "Òrgan"
+msgstr ""
