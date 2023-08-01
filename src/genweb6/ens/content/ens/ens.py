@@ -453,7 +453,7 @@ def get_aportacio_total(ens):
         moneda = "" if ens.aportacio_total_moneda is None \
                  else " " + ens.aportacio_total_moneda.encode("utf-8")
         return "{0:,.2f}{1}".format(
-            ens.aportacio_total, moneda).decode('utf-8')
+            ens.aportacio_total, moneda)
     else:
         return '-'
 
@@ -463,7 +463,7 @@ def get_aportacio(ens):
         moneda = "" if ens.aportacio_moneda is None \
                  else " " + ens.aportacio_moneda.encode("utf-8")
         return "{0:,.2f}{1}".format(
-            ens.aportacio_import, moneda).decode('utf-8')
+            ens.aportacio_import, moneda)
     else:
         return '-'
 
@@ -473,7 +473,7 @@ def get_quota(ens):
         moneda = "" if ens.quota_moneda is None \
             else " " + ens.quota_moneda.encode("utf-8")
         return "{0:,.2f}{1}".format(
-            ens.quota_import, moneda).decode('utf-8')
+            ens.quota_import, moneda)
     else:
         return '-'
 
@@ -483,7 +483,7 @@ def get_capital_social(ens):
         moneda = "" if ens.capital_social_moneda is None \
             else " " + ens.capital_social_moneda.encode("utf-8")
         return "{0:,.2f}{1}".format(
-            ens.capital_social_import, moneda).decode('utf-8')
+            ens.capital_social_import, moneda)
     else:
         return '-'
 
@@ -629,7 +629,7 @@ class View(BrowserView):
 
     def get_file_href(self, content):
         return "{0}/view/++widget++form.widgets.fitxer/@@download/{1}".format(
-            content.absolute_url(), content.fitxer.filename.encode('utf-8'))
+            content.absolute_url(), content.fitxer.filename)
 
     def list_carrecs_by_organ(self, organ, is_historic=None):
         reporter = EnsDataReporter(api.portal.get_tool("portal_catalog"))
@@ -639,7 +639,7 @@ class View(BrowserView):
     def prettify_organ_title(self, organ):
         return "{0}{1}".format(
             organ.Title,
-            _(u" (Històric)").encode('utf-8') if organ.is_historic else u"")
+            _(u" (Històric)") if organ.is_historic else u"")
 
     def getData(self):
         ens = self.context

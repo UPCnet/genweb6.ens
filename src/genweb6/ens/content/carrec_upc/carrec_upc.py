@@ -18,7 +18,7 @@ from genweb6.ens.data_access.carrec import CarrecDataReporter
 
 
 def prettify_representant(representant):
-    return representant.Title.decode('utf-8') + ' - ' + representant.carrec
+    return representant.Title + ' - ' + representant.carrec
 
 
 def get_vocabulary_representants_upc(context):

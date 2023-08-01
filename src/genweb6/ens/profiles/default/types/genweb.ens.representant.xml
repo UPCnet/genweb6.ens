@@ -26,7 +26,7 @@
         <element value="plone.namefromtitle"/>
         <element value="plone.allowdiscussion"/>
         <element value="plone.excludefromnavigation"/>
-        <element value="plone.selectablecontrainstypes"/>
+        <element value="plone.constraintypes"/>
         <element value="plone.translatable"/>
         <element value="plone.nextprevioustoggle"/>
         <element value="plone.textindexer" />

@@ -13,14 +13,14 @@
 
     <div class="accordion-item">
       <h2 class="accordion-header" id="headingDadesIdentificatives">
-        <button class="accordion-button" type="button"
+        <button class="accordion-button collapsed" type="button"
                 data-bs-toggle="collapse" data-bs-target="#collapseDadesIdentificatives"
-                aria-expanded="true" aria-controls="collapseDadesIdentificatives"
+                aria-expanded="false" aria-controls="collapseDadesIdentificatives"
                 i18n:translate="">
           Dades identificatives
         </button>
       </h2>
-      <div id="collapseDadesIdentificatives" class="accordion-collapse collapse show"
+      <div id="collapseDadesIdentificatives" class="accordion-collapse collapse"
            aria-labelledby="headingDadesIdentificatives" data-bs-parent="#accordionEns">
 
         <div class="accordion-body"
@@ -30,78 +30,58 @@
 
           <dl class="row mb-4">
 
-            <dt class="col-sm-3" i18n:translate="">Denominació</dt>
-            <dd class="col-sm-9"
-                tal:content="context/title"/>
+            <dt class="col-md-4" i18n:translate="">Denominació</dt>
+            <dd class="col-md-8" tal:content="context/title"/>
 
-            <dt class="col-sm-3" i18n:translate="">Acrònim</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.acronim or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Acrònim</dt>
+            <dd class="col-md-8" tal:content="python:context.acronim or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Objecte social</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.objecte_social or '-'"
-                class="fieldset-end"/>
+            <dt class="col-md-4" i18n:translate="">Objecte social</dt>
+            <dd class="col-md-8 text-end" tal:content="python:context.objecte_social or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Estat</dt>
-            <dd class="col-sm-9"
-                tal:define="data view/getData">
+            <dt class="col-md-4" i18n:translate="">Estat</dt>
+            <dd class="col-md-8" tal:define="data view/getData">
               <span i18n:translate="" tal:content="context/estat"/> (<span tal:content="data"/>)
             </dd>
 
-            <dt class="col-sm-3" i18n:translate="">NIF</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.nif or '-'"/>
+            <dt class="col-md-4" i18n:translate="">NIF</dt>
+            <dd class="col-md-8" tal:content="python:context.nif or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Àmbit institucional</dt>
-            <dd class="col-sm-9"
-                i18n:translate="" tal:content="python:context.institution_type or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Àmbit institucional</dt>
+            <dd class="col-md-8" i18n:translate="" tal:content="python:context.institution_type or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Figura jurídica</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.figura_juridica or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Figura jurídica</dt>
+            <dd class="col-md-8" tal:content="python:context.figura_juridica or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Identificadors</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.numero_identificacio or '-'"
-                class="fieldset-end"/>
+            <dt class="col-md-4" i18n:translate="">Identificadors</dt>
+            <dd class="col-md-8 text-end" tal:content="python:context.numero_identificacio or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Domicili social (població)</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.domicili_social_poblacio or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Domicili social (població)</dt>
+            <dd class="col-md-8" tal:content="python:context.domicili_social_poblacio or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Domicili social (adreça)</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.domicili_social_adreca or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Domicili social (adreça)</dt>
+            <dd class="col-md-8" tal:content="python:context.domicili_social_adreca or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Adreça 2</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.adreca_2 or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Adreça 2</dt>
+            <dd class="col-md-8" tal:content="python:context.adreca_2 or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Telèfon</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.telefon or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Telèfon</dt>
+            <dd class="col-md-8" tal:content="python:context.telefon or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Fax</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.fax or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Fax</dt>
+            <dd class="col-md-8" tal:content="python:context.fax or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Web</dt>
-            <dd class="col-sm-9 fieldset-end"
-                tal:content="python:context.web or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Web</dt>
+            <dd class="col-md-8 fieldset-end" tal:content="python:context.web or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Tipologia UPC</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.tipologia_upc or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Tipologia UPC</dt>
+            <dd class="col-md-8" tal:content="python:context.tipologia_upc or '-'"/>
 
-            <dt class="col-sm-3" i18n:translate="">Codi UPC</dt>
-            <dd class="col-sm-9"
-                tal:content="python:context.codi or '-'"/>
+            <dt class="col-md-4" i18n:translate="">Codi UPC</dt>
+            <dd class="col-md-8" tal:content="python:context.codi or '-'"/>
 
-            <dt class="col-sm-3 subfield"
-                i18n:translate="">Núm.:</dt>
-            <dd class="col-sm-9"
-                tal:content="python:'%04d' % context.num_ens if context.num_ens else '-'"/>
+            <dt class="col-md-4 ps-4" i18n:translate="">Núm.:</dt>
+            <dd class="col-md-8" tal:content="python:'%04d' % context.num_ens if context.num_ens else '-'"/>
 
           </dl>
 
@@ -110,34 +90,34 @@
 
           <tal:block tal:condition="directius">
 
-            <div class="form-check mb-2">
+            <div class="mb-2 hasHistoric">
 
-              <input class="form-check-input selector-input-historic" type="checkbox" value=""
-                     tal:attributes="id string:cb-directius"
+              <input class="form-check-input" type="checkbox" value=""
                      id="historicDadesIdentificatives">
 
-              <label class="form-check-label"
-                     tal:attributes="for string:cb-directius"
+              <label class="form-check-label" for="historicDadesIdentificatives"
                      i18n:translate="">
                 Mostra els càrrecs històrics
               </label>
 
             </div>
 
+            <p class="text-muted d-none notHistoric" i18n:translate="">(No hi ha càrrecs històrics)</p>
+
             <div class="table-responsive">
-              <table class="table">
+              <table class="table table-hover">
                 <thead>
                   <tr class="table-dark">
-                    <th scope="col" i18n:translate="">Nom</th>
-                    <th scope="col" i18n:translate="">Càrrec</th>
-                    <th scope="col" i18n:translate="">Telèfon</th>
-                    <th scope="col" i18n:translate="">Email</th>
-                    <th scope="col" i18n:translate="">Històric</th>
+                    <th class="col-md-4" scope="col" i18n:translate="">Nom</th>
+                    <th class="col-md-3" scope="col" i18n:translate="">Càrrec</th>
+                    <th class="col-md-2" scope="col" i18n:translate="">Telèfon</th>
+                    <th class="col-md-2" scope="col" i18n:translate="">Email</th>
+                    <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr tal:repeat="directiu directius"
-                      tal:attributes="class python:'historic d-none' if directiu.is_historic else ''">
+                      tal:attributes="class python:'historic table-info' if directiu.is_historic else ''">
                     <td>
                       <a tal:attributes="href directiu/absolute_url"
                          tal:content="directiu/title"/>
@@ -145,9 +125,10 @@
                     <td tal:content="python:directiu.carrec or '-'"/>
                     <td tal:content="python:directiu.telefon or '-'"/>
                     <td tal:content="python:directiu.email or '-'"/>
-                    <td class="column-center">
-                      <input type="checkbox" class="hidable-group-element"
-                             tal:attributes="checked directiu/is_historic; disabled python:True"/>
+                    <td class="text-center">
+                      <input type="checkbox"
+                             tal:attributes="checked directiu/is_historic;
+                                             disabled python:True"/>
                     </td>
                   </tr>
                 </tbody>
@@ -162,13 +143,13 @@
               i18n:translate="">Persones de contacte</h3>
 
           <div class="table-responsive" tal:condition="contactes">
-            <table class="table">
+            <table class="table table-hover">
               <thead>
                 <tr class="table-dark">
-                  <th scope="col" i18n:translate="">Nom</th>
-                  <th scope="col" i18n:translate="">Càrrec</th>
-                  <th scope="col" i18n:translate="">Telèfon</th>
-                  <th scope="col" i18n:translate="">Email</th>
+                  <th class="col-md-4" scope="col" i18n:translate="">Nom</th>
+                  <th class="col-md-3" scope="col" i18n:translate="">Càrrec</th>
+                  <th class="col-md-2" scope="col" i18n:translate="">Telèfon</th>
+                  <th class="col-md-3" scope="col" i18n:translate="">Email</th>
                 </tr>
               </thead>
               <tbody>
@@ -194,18 +175,17 @@
 
             <div class="form-check mb-2">
 
-              <input class="form-check-input label-aligned selector-input-observacions" type="checkbox" value=""
-                     tal:attributes="id string:cb-directius"
+              <input class="form-check-input" type="checkbox" value=""
                      id="observacionsDadesIdentificatives">
 
-              <label class="form-check-label" for="obs"
+              <label class="form-check-label" for="observacionsDadesIdentificatives"
                      i18n:translate="">
                 Mostra les observacions
               </label>
 
             </div>
 
-            <div class="observacionsContentDadesIdentificatives d-none"
+            <div class="observacions"
                  tal:content="observacions">
                 observaciones dades identificatives
             </div>
@@ -229,9 +209,337 @@
       </h2>
       <div id="collapseParticipacioUPC" class="accordion-collapse collapse"
            aria-labelledby="headingParticipacioUPC" data-bs-parent="#accordionEns">
-        <div class="accordion-body">
 
+        <div class="accordion-body"
+             tal:define="organs view/organs_govern;
+                         organs_assessors view/organs_assessors;
+                         unitats view/unitats">
 
+          <h3 class="fs-xxxl" i18n:translate="">1. Al capital social o fons patrimonial</h3>
+
+          <dl class="row ms-4 mb-4">
+
+            <dt class="col-md-4" i18n:translate="">Data</dt>
+            <dd class="col-md-8" tal:content="view/data_participacio"/>
+
+            <dt class="col-md-4" i18n:translate="">Fons patrimonial</dt>
+            <dd class="col-md-8" tal:content="view/capital_social"/>
+
+            <dt class="col-md-4" i18n:translate="">Capital inicial total</dt>
+            <dd class="col-md-8" tal:content="view/aportacio_total"/>
+
+            <dt class="col-md-4" i18n:translate="">Aportació inicial UPC</dt>
+            <dd class="col-md-8" tal:content="view/aportacio"/>
+
+            <dt class="col-md-4" i18n:translate="Percentatge de participació">Percentatge de participació</dt>
+            <dd class="col-md-8" tal:content="view/percentatge_participacio"/>
+
+            <dt class="col-md-4" i18n:translate="">
+
+              <input class="form-check-input me-1" type="checkbox" value=""
+                     tal:condition="view/observacions_participacio"
+                     id="observacionsCapitalParticipacioUPC">
+
+              <label class="form-check-label" for="observacionsCapitalParticipacioUPC"
+                     i18n:translate="">
+                Observacions
+              </label>
+
+            </dt>
+            <dd class="col-md-8">
+              <span class="observacionsCapital"
+                    tal:condition="view/observacions_participacio"
+                    tal:content="view/observacions_participacio" ></span>
+              <span tal:condition="not:view/observacions_participacio">-</span>
+            </dd>
+
+          </dl>
+
+          <h3 class="fs-xxxl" i18n:translate="">2. A òrgan de govern superior</h3>
+
+          <dl class="row ms-4 mb-4">
+
+            <dt class="col-md-4" i18n:translate="">Membres totals</dt>
+            <dd class="col-md-8" tal:content="python:context.total_membres or '-'" />
+
+            <dt class="col-md-4" i18n:translate="Membres UPC als òrgans de govern">Membres UPC als òrgans de govern</dt>
+            <dd class="col-md-8" tal:content="python:context.nombre_membres or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">% UPC en vots</dt>
+            <dd class="col-md-8" tal:content="view/percentatge_membres" />
+
+            <dt class="col-md-4" i18n:translate="">
+
+              <input class="form-check-input me-1" type="checkbox" value=""
+                     tal:condition="view/observacions_membres"
+                     id="observacionsMembresParticipacioUPC">
+
+              <label class="form-check-label" for="observacionsMembresParticipacioUPC"
+                     i18n:translate="">
+                Observacions
+              </label>
+
+            </dt>
+            <dd class="col-md-8">
+              <span class="observacionsMembres"
+                    tal:condition="view/observacions_membres"
+                    tal:content="view/observacions_membres" ></span>
+              <span tal:condition="not:view/observacions_membres">-</span>
+            </dd>
+
+          </dl>
+
+          <h3 class="fs-xxxl" i18n:translate="">3. Quota anual</h3>
+
+          <dl class="row ms-4 mb-4">
+
+            <dt class="col-md-4" i18n:translate="Quota">Quota anual</dt>
+            <dd class="col-md-8" tal:content="view/quota"/>
+
+            <dt class="col-md-4">
+
+              <input class="form-check-input me-1" type="checkbox" value=""
+                     tal:condition="view/observacions_quota"
+                     id="observacionsQuotaParticipacioUPC">
+
+              <label class="form-check-label" for="observacionsQuotaParticipacioUPC"
+                     i18n:translate="">
+                Observacions
+              </label>
+
+            </dt>
+            <dd class="col-md-8">
+              <span class="observacionsQuota"
+                    tal:condition="view/observacions_quota"
+                    tal:content="view/observacions_quota" ></span>
+              <span tal:condition="not:view/observacions_quota">-</span>
+            </dd>
+
+          </dl>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Òrgans de govern</h3>
+
+          <tal:block repeat="organ organs">
+
+            <section class="mb-4 sectionOGParticipacio"
+                     tal:define="composicio organ/composicio;
+                                 carrecs python:view.list_carrecs_by_organ(organ)">
+
+              <h4>
+                <a tal:content="python:view.prettify_organ_title(organ)"
+                   tal:attributes="href organ/getURL"/>
+              </h4>
+
+              <tal:block tal:condition="composicio">
+
+                <input class="form-check-input me-1 composicioOGParticipacioSwitch" type="checkbox" value=""
+                       tal:attributes="id string:composicioOGParticipacio-{organ/id}">
+
+                <label class="form-check-label"
+                       tal:attributes="for string:composicioOGParticipacio-{organ/id}"
+                       i18n:translate="">
+                  Mostra composició
+                </label>
+
+                <p class="composicioOGParticipacio" tal:content="organ/composicio"></p>
+
+              </tal:block>
+
+              <tal:block tal:condition="carrecs">
+
+                <div class="mb-2 hasHistoricCarrecOGParticipacio">
+
+                  <input class="form-check-input me-1 historicCarrecOGParticipacioSwitch" type="checkbox" value=""
+                        tal:attributes="id string:carrecsOG-{organ/id}">
+
+                  <label class="form-check-label"
+                        tal:attributes="for string:carrecsOG-{organ/id}"
+                        i18n:translate="">
+                    Mostra els càrrecs històrics
+                  </label>
+
+                </div>
+
+                <p class="text-muted d-none notHistoricCarrecOGParticipacio" i18n:translate="">(No hi ha càrrecs històrics)</p>
+
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="table-dark">
+                        <th class="col-md-2" scope="col" i18n:translate="">Ens</th>
+                        <th class="col-md-3" scope="col" i18n:translate="">Nom</th>
+                        <th class="col-md-2" scope="col" i18n:translate="">Càrrec</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data inici</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Vigència</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data fi</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Ratificat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tal:block tal:repeat="carrecs_by_ens carrecs">
+                        <tr tal:repeat="carrec python:carrecs_by_ens[1]"
+                            tal:define="ens python:carrecs_by_ens[0]"
+                            tal:attributes="class python:'historicCarrecOGParticipacio table-info' if carrec.is_historic else ''">
+                          <td tal:content="ens"/>
+                          <td>
+                            <a tal:content="carrec/Title"
+                              tal:attributes="href carrec/absolute_url"/>
+                          </td>
+                          <td tal:content="carrec/carrec"/>
+                          <td class="text-center"
+                              tal:content="python:carrec.data_inici and carrec.data_inici.strftime('%d/%m/%Y') or '-'"/>
+                          <td class="text-center" tal:content="carrec/vigencia"/>
+                          <td class="text-center"
+                              tal:content="python:carrec.data_fi and carrec.data_fi.strftime('%d/%m/%Y') or '-'"/>
+                          <td class="text-center">
+                            <input type="checkbox" class="hidable-group-element" disabled="disabled"
+                                   tal:attributes="checked carrec/is_historic;"/>
+                          </td>
+                          <td class="text-center">
+                            <input type="checkbox" disabled="disabled"
+                                   tal:attributes="checked carrec/nomenaments_anteriors;"/>
+                          </td>
+                        </tr>
+                      </tal:block>
+                    </tbody>
+                  </table>
+                </div>
+              </tal:block>
+
+              <p tal:condition="not:carrecs">---</p>
+
+            </section>
+
+          </tal:block>
+
+          <p tal:condition="not:organs">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Òrgans assessors</h3>
+
+          <tal:block repeat="organ organs_assessors">
+
+            <section class="mb-4 sectionOGAssessorsParticipacio"
+                     tal:define="composicio organ/composicio;
+                                 carrecs python:view.list_carrecs_by_organ(organ)">
+
+              <h4>
+                <a tal:content="python:view.prettify_organ_title(organ)"
+                   tal:attributes="href organ/getURL"/>
+              </h4>
+
+              <tal:block tal:condition="composicio">
+
+                <input class="form-check-input me-1 composicioOGAssessorsParticipacioSwitch" type="checkbox" value=""
+                       tal:attributes="id string:composicioOGAssessorsParticipacio-{organ/id}">
+
+                <label class="form-check-label"
+                       tal:attributes="for string:composicioOGAssessorsParticipacio-{organ/id}"
+                       i18n:translate="">
+                  Mostra composició
+                </label>
+
+                <p class="composicioOGAssessorsParticipacio" tal:content="organ/composicio"></p>
+
+              </tal:block>
+
+              <tal:block tal:condition="carrecs">
+
+                <div class="mb-2 hasHistoricCarrecOGAssessorsParticipacio">
+
+                  <input class="form-check-input me-1 historicCarrecOGAssessorsParticipacioSwitch" type="checkbox" value=""
+                        tal:attributes="id string:carrecsOGAssessors-{organ/id}">
+
+                  <label class="form-check-label"
+                        tal:attributes="for string:carrecsOGAssessors-{organ/id}"
+                        i18n:translate="">
+                    Mostra els càrrecs històrics
+                  </label>
+
+                </div>
+
+                <p class="text-muted d-none notHistoricCarrecOGAssessorsParticipacio" i18n:translate="">(No hi ha càrrecs històrics)</p>
+
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <thead>
+                      <tr class="table-dark">
+                        <th class="col-md-2" scope="col" i18n:translate="">Ens</th>
+                        <th class="col-md-3" scope="col" i18n:translate="">Nom</th>
+                        <th class="col-md-2" scope="col" i18n:translate="">Càrrec</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data inici</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Vigència</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data fi</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
+                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Ratificat</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tal:block tal:repeat="carrecs_by_ens carrecs">
+                        <tr tal:repeat="carrec python:carrecs_by_ens[1]"
+                            tal:define="ens python:carrecs_by_ens[0]"
+                            tal:attributes="class python:'historicCarrecOGAssessorsParticipacio table-info' if carrec.is_historic else ''">
+                          <td tal:content="ens"/>
+                          <td>
+                            <a tal:content="carrec/Title"
+                              tal:attributes="href carrec/absolute_url"/>
+                          </td>
+                          <td tal:content="carrec/carrec"/>
+                          <td class="text-center"
+                              tal:content="python:carrec.data_inici and carrec.data_inici.strftime('%d/%m/%Y') or '-'"/>
+                          <td class="text-center" tal:content="carrec/vigencia"/>
+                          <td class="text-center"
+                              tal:content="python:carrec.data_fi and carrec.data_fi.strftime('%d/%m/%Y') or '-'"/>
+                          <td class="text-center">
+                            <input type="checkbox" class="hidable-group-element" disabled="disabled"
+                                   tal:attributes="checked carrec/is_historic;"/>
+                          </td>
+                          <td class="text-center">
+                            <input type="checkbox" disabled="disabled"
+                                   tal:attributes="checked carrec/nomenaments_anteriors;"/>
+                          </td>
+                        </tr>
+                      </tal:block>
+                    </tbody>
+                  </table>
+                </div>
+              </tal:block>
+
+              <p tal:condition="not:carrecs">---</p>
+
+            </section>
+
+          </tal:block>
+
+          <p tal:condition="not:organs_assessors">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Unitats UPC implicades</h3>
+
+          <table class="table table-hover"
+                 tal:condition="unitats">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-3" scope="col" i18n:translate="">Unitat</th>
+                <th class="col-md-3" scope="col" i18n:translate="">Persona de referència</th>
+                <th class="col-md-6" scope="col" i18n:translate="">Observacions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="unitat unitats">
+                <td>
+                  <a tal:content="unitat/title"
+                     tal:attributes="href unitat/absolute_url"/>
+                </td>
+                <td tal:content="python:unitat.persona or '-'"/>
+                <td tal:content="python:unitat.observacions or '-'"/>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:unitats">---</p>
 
         </div>
       </div>
@@ -248,9 +556,265 @@
       </h2>
       <div id="collapseMarcLegal" class="accordion-collapse collapse"
            aria-labelledby="headingMarcLegal" data-bs-parent="#accordionEns">
-        <div class="accordion-body">
 
+        <div class="accordion-body"
+             tal:define="estatuts_vigents view/estatuts_vigents;
+                         estatuts_anteriors view/estatuts_historics;
+                         acords view/acords;
+                         escriptures view/escriptures;
+                         convenis view/convenis;
+                         observacions python:context.marc_legal_observacions">
 
+          <dl class="row mb-4">
+
+            <dt class="col-md-4" i18n:translate="">Data de constitució</dt>
+            <dd class="col-md-8"
+                tal:content="python:context.data_constitucio and context.data_constitucio.strftime('%d/%m/%Y') or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Data estatuts</dt>
+            <dd class="col-md-8"
+                tal:content="python:len(estatuts_vigents) > 0 and estatuts_vigents[0].data and estatuts_vigents[0].data.strftime('%d/%m/%Y') or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Entitats constituents</dt>
+            <dd class="col-md-8" tal:content="python:context.entitats_constituents or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Entitats actuals</dt>
+            <dd class="col-md-8" tal:content="python:context.entitats_actuals or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Data d'alta UPC</dt>
+            <dd class="col-md-8"
+                tal:content="python:context.data_entrada and context.data_entrada.strftime('%d/%m/%Y') or '-'"/>
+
+            <dt class="col-md-4 ps-4" i18n:translate="" class="subfield">Acord d'alta</dt>
+            <dd class="col-md-8" tal:content="python:context.data_entrada_acord or '-'"/>
+
+            <dt class="col-md-4 ps-4" i18n:translate="" class="subfield">Procediment d'alta</dt>
+            <dd class="col-md-8" tal:content="python:context.data_entrada_procediment or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Data de baixa UPC</dt>
+            <dd class="col-md-8"
+                tal:content="python:context.data_baixa and context.data_baixa.strftime('%d/%m/%Y') or '-'"/>
+
+            <dt class="col-md-4 ps-4" i18n:translate="" class="subfield">Acord de baixa</dt>
+            <dd class="col-md-8" tal:content="python:context.data_baixa_acord or '-'"/>
+
+            <dt class="col-md-4 ps-4" i18n:translate="" class="subfield">Procediment de baixa</dt>
+            <dd class="col-md-8" tal:content="python:context.data_baixa_procediment or '-'"/>
+
+            <dt class="col-md-4" i18n:translate="">Adm. Pública d'adscripció</dt>
+            <dd class="col-md-8" tal:content="view/adscripcio"/>
+
+          </dl>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Acords UPC</h3>
+
+          <table class="table table-hover"
+                 tal:condition="acords">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-3" scope="col" i18n:translate="">Òrgan</th>
+                <th class="col-md-4" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-4" scope="col" i18n:translate="">Fitxer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="acord acords">
+                <td class="text-center"
+                    tal:content="python:acord.data and acord.data.strftime('%d/%m/%Y') or '-'"/>
+                <td tal:content="python:acord.organ or '-'"/>
+                <td>
+                  <a tal:attributes="href acord/absolute_url"
+                     tal:content="acord/title"/>
+                </td>
+                <td>
+                  <a class="text-break"
+                     tal:condition="acord/fitxer"
+                     tal:attributes="href python:view.get_file_href(acord)"
+                     tal:content="acord/fitxer/filename"/>
+                  <tal:block tal:condition="not:acord/fitxer">-</tal:block>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:acords">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Documents públics</h3>
+
+          <table class="table table-hover"
+                 tal:condition="escriptures">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-3" scope="col" i18n:translate="">Notari</th>
+                <th class="col-md-4" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-4" scope="col" i18n:translate="">Fitxer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="escriptura escriptures">
+                <td class="text-center"
+                    tal:content="python:escriptura.data and escriptura.data.strftime('%d/%m/%Y') or '-'"/>
+                <td tal:content="python:escriptura.notari or '-'"/>
+                <td>
+                  <a tal:attributes="href escriptura/absolute_url"
+                     tal:content="escriptura/title"/>
+                </td>
+                <td>
+                  <a class="text-break"
+                     tal:condition="escriptura/fitxer"
+                     tal:attributes="href python:view.get_file_href(escriptura)"
+                     tal:content="escriptura/fitxer/filename"/>
+                  <tal:block tal:condition="not:escriptura/fitxer">-</tal:block>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:escriptures">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Estatuts i normatives</h3>
+
+          <h4 class="pb-2"
+              i18n:translate="">Vigents</h4>
+
+          <table class="table table-hover"
+                 tal:condition="estatuts_vigents">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="estatut estatuts_vigents">
+                <td class="text-center"
+                    tal:content="python:estatut.data and estatut.data.strftime('%d/%m/%Y') or '-'"/>
+                <td>
+                  <a tal:attributes="href estatut/absolute_url"
+                     tal:content="estatut/title"/>
+                </td>
+                <td>
+                  <a class="text-break"
+                     tal:condition="estatut/fitxer"
+                     tal:attributes="href python:view.get_file_href(estatut)"
+                     tal:content="estatut/fitxer/filename"/>
+                  <tal:block tal:condition="not:estatut/fitxer">-</tal:block>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:estatuts_vigents">---</p>
+
+          <h4 class="pb-2"
+              i18n:translate="">Anteriors</h4>
+
+          <table class="table table-hover"
+                 tal:condition="estatuts_anteriors">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="estatut estatuts_anteriors">
+                <td class="text-center"
+                    tal:content="python:estatut.data and estatut.data.strftime('%d/%m/%Y') or '-'"/>
+                <td>
+                  <a tal:attributes="href estatut/absolute_url"
+                     tal:content="estatut/title"/>
+                </td>
+                <td>
+                  <a class="text-break"
+                     tal:condition="estatut/fitxer"
+                     tal:attributes="href python:view.get_file_href(estatut)"
+                     tal:content="estatut/fitxer/filename"/>
+                  <tal:block tal:condition="not:estatut/fitxer">-</tal:block>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:estatuts_anteriors">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Reunions</h3>
+
+          <a href="reunions" target="_blank"
+             i18n:translate="">Accés reunions</a>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Convenis</h3>
+
+          <table class="table table-hover"
+                 tal:condition="convenis">
+            <thead>
+              <tr class="table-dark">
+                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr tal:repeat="conveni convenis">
+                <td class="text-center"
+                    tal:content="python:conveni.data and conveni.data.strftime('%d/%m/%Y') or '-'"/>
+                <td>
+                  <a tal:attributes="href conveni/absolute_url"
+                     tal:content="conveni/title"/>
+                </td>
+                <td>
+                  <a class="text-break"
+                     tal:condition="conveni/fitxer"
+                     tal:attributes="href python:view.get_file_href(conveni)"
+                     tal:content="conveni/fitxer/filename"/>
+                  <tal:block tal:condition="not:conveni/fitxer">-</tal:block>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p tal:condition="not:convenis">---</p>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Altres documents d'interès</h3>
+
+          <a href="altres-documents" target="_blank"
+             i18n:translate="">Accés altres documents d'interès</a>
+
+          <h3 class="pb-2 border-bottom"
+              i18n:translate="">Observacions</h3>
+
+          <tal:block tal:condition="observacions">
+
+            <div class="form-check mb-2">
+
+              <input class="form-check-input" type="checkbox" value=""
+                     id="observacionsMarcLegal">
+
+              <label class="form-check-label" for="observacionsMarcLegal"
+                     i18n:translate="">
+                Mostra les observacions
+              </label>
+
+            </div>
+
+            <div class="observacionsLegal"
+                 tal:content="observacions">
+                observaciones dades identificatives
+            </div>
+
+          </tal:block>
+
+          <p tal:condition="not:observacions">---</p>
 
         </div>
       </div>
@@ -259,491 +823,9 @@
   </div>
 
   <script type="text/javascript"
-          tal:attributes="src string:${context/absolute_url}/++theme++genweb6.ens/js/contents/ens.min.js"></script>
-
-
-
-
-
-    <section id="ens-metadata" class="ens-metadata"
-             tal:define="estatuts_vigents view/estatuts_vigents">
-        <h2 i18n:translate="Dades indentificatives">
-            Dades identificatives
-        </h2>
-        <div>
-            <dl>
-
-
-
-
-
-
-
-
-
-        <h2 i18n:translate="Participació de la UPC">
-            Participació de la UPC
-        </h2>
-        <div id="participation">
-        <h4>1. Al capital social o fons patrimonial</h4>
-        <dl>
-          <dt i18n:translate="">Data</dt>
-          <dd tal:content="view/data_participacio"/>
-          <dt i18n:translate="">Fons patrimonial</dt>
-          <dd tal:content="view/capital_social"/>
-          <dt i18n:translate="">Capital inicial total</dt>
-          <dd tal:content="view/aportacio_total"/>
-          <dt i18n:translate="">Aportació inicial UPC</dt>
-          <dd tal:content="view/aportacio"/>
-          <dt i18n:translate="Percentatge de participació">Percentatge de participació</dt>
-          <dd tal:content="view/percentatge_participacio"/>
-          <dt i18n:translate="">
-            <input type="checkbox" class="observacions_participacio-switch label-aligned"
-                   tal:condition="view/observacions_participacio" />
-            <span i18n:translate="">Observacions</span>
-          </dt>
-          <dd>
-            <span class="observacions_participacio-content"
-                  tal:condition="view/observacions_participacio"
-                  tal:content="view/observacions_participacio" ></span>
-            <span tal:condition="not:view/observacions_participacio">-</span>
-          </dd>
-        </dl>
-        <br/>
-          <h4>2. A òrgan de govern superior</h4>
-        <dl>
-          <dt i18n:translate="">Membres totals</dt>
-          <dd tal:content="python:context.total_membres or '-'" />
-          <dt i18n:translate="Membres UPC als òrgans de govern">Membres UPC als òrgans de govern</dt>
-          <dd tal:content="python:context.nombre_membres or '-'"/>
-          <dt i18n:translate="">% UPC en vots</dt>
-          <dd tal:content="view/percentatge_membres" />
-          <dt i18n:translate="">
-            <input type="checkbox" class="observacions_membres-switch label-aligned"
-                   tal:condition="view/observacions_membres" />
-            <span i18n:translate="">Observacions</span>
-          </dt>
-          <dd>
-            <span class="observacions_membres-content"
-                  tal:condition="view/observacions_membres"
-                  tal:content="view/observacions_membres" ></span>
-            <span tal:condition="not:view/observacions_membres">-</span>
-          </dd>
-        </dl>
-        <br/>
-        <h4>3. Quota anual</h4>
-        <dl>
-          <dt i18n:translate="Quota">Quota anual</dt>
-          <dd tal:content="view/quota"/>
-          <dt>
-            <input type="checkbox" class="observacions_quota-switch label-aligned"
-                   tal:condition="view/observacions_quota" />
-            <span i18n:translate="">Observacions</span>
-          </dt>
-          <dd>
-            <span class="observacions_quota-content"
-                  tal:condition="view/observacions_quota"
-                  tal:content="view/observacions_quota" ></span>
-            <span tal:condition="not:view/observacions_quota">-</span>
-          </dd>
-        </dl>
-        <br/>
-
-        <h3 i18n:translate="Òrgans de govern">Òrgans de govern</h3>
-        <tal:block define="organs view/organs_govern">
-          <tal:block repeat="organ organs">
-            <section class="ens-metadata-level-2">
-            <h4><a tal:content="python:view.prettify_organ_title(organ)"
-                   tal:attributes="href organ/getURL"/>
-            </h4>
-            <div>
-              <input type="checkbox" class="composicio-switch label-aligned"
-                     tal:attributes="id python:'cb-composicio-' + organ.id"/>
-              <label i18n:translate="Mostra composició"
-                     tal:attributes="for python:'cb-composicio-' + organ.id">Mostra composició</label>
-              <p tal:content="organ/composicio"></p>
-            </div>
-            <tal:block define="carrecs python:view.list_carrecs_by_organ(organ)">
-              <tal:block condition="carrecs">
-                <input type="checkbox" class="label-aligned selector-input-historic"
-                       tal:attributes="id python:'cb-' + organ.id"/>
-                <label i18n:translate="Mostra els càrrecs històrics"
-                       tal:attributes="for python:'cb-' + organ.id">Mostra els càrrecs històrics</label>
-                <table class="ens-taula">
-                <thead>
-                  <tr>
-                    <th i18n:translate="Ens" class="column-small">Ens</th>
-                    <th i18n:translate="Nom" class="column-medium">Nom</th>
-                    <th i18n:translate="Càrrec" class="column-small">Càrrec</th>
-                    <th i18n:translate="Data inici" class="column-small">Data inici</th>
-                    <th i18n:translate="Vigència" class="column-small">Vigència</th>
-                    <th i18n:translate="Data fi" class="column-small">Data fi</th>
-                    <th i18n:translate="Històric" class="column-center">Històric</th>
-                    <th i18n:translate="Ratificat" class="column-center">Ratificat</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tal:block repeat="carrecs_by_ens carrecs">
-                    <tal:block define="ens python:carrecs_by_ens[0]">
-                      <tr tal:repeat="carrec python:carrecs_by_ens[1]"
-                          tal:attributes="class python:'historic' if carrec.is_historic else ''">
-                        <td tal:content="ens"/>
-                        <td><a tal:content="carrec/Title"
-                               tal:attributes="href carrec/absolute_url"/>
-                        </td>
-                        <td tal:content="carrec/carrec"/>
-                        <td tal:content="python:carrec.data_inici and carrec.data_inici.strftime('%d/%m/%Y') or '-'"/>
-                        <td tal:content="carrec/vigencia"/>
-                        <td tal:content="python:carrec.data_fi and carrec.data_fi.strftime('%d/%m/%Y') or '-'"/>
-                        <td class="column-center">
-                          <input type="checkbox" class="hidable-group-element" disabled="disabled"
-                                 tal:attributes="checked carrec/is_historic;"/>
-                        </td>
-                        <td class="column-center">
-                          <input type="checkbox" disabled="disabled"
-                                 tal:attributes="checked carrec/nomenaments_anteriors;"/>
-                        </td>
-                      </tr>
-                    </tal:block>
-                  </tal:block>
-                </tbody>
-                </table>
-              </tal:block>
-              <p tal:condition="not:carrecs">---</p>
-            </tal:block>
-            </section>
-          </tal:block>
-          <p tal:condition="not:organs">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Òrgans assessors">Òrgans assessors</h3>
-        <tal:block define="organs view/organs_assessors">
-        <tal:block repeat="organ organs">
-          <section class="ens-metadata-level-2">
-          <h4><a tal:content="python:view.prettify_organ_title(organ)"
-                 tal:attributes="href organ/getURL"/>
-          </h4>
-          <div>
-            <input type="checkbox" class="composicio-switch label-aligned"
-                   tal:attributes="id python:'cb-composicio-' + organ.id"/>
-            <label i18n:translate="Mostra composició"
-                   tal:attributes="for python:'cb-composicio-' + organ.id">Mostra composició</label>
-            <p tal:content="organ/composicio"></p>
-          </div>
-          <tal:block define="carrecs python:view.list_carrecs_by_organ(organ)">
-            <tal:block condition="carrecs">
-              <input type="checkbox" class="label-aligned selector-input-historic"
-                     tal:attributes="id python:'cb-' + organ.id" />
-              <label i18n:translate="Mostra els càrrecs històrics"
-                     tal:attributes="for python:'cb-' + organ.id">Mostra els càrrecs històrics</label>
-              <table class="ens-taula">
-              <thead>
-                <tr>
-                  <th i18n:translate="Ens" class="column-small">Ens</th>
-                  <th i18n:translate="Nom" class="column-medium">Nom</th>
-                  <th i18n:translate="Càrrec" class="column-small">Càrrec</th>
-                  <th i18n:translate="Data inici" class="column-small">Data inici</th>
-                  <th i18n:translate="Vigència" class="column-small">Vigència</th>
-                  <th i18n:translate="Data fi" class="column-small">Data fi</th>
-                  <th i18n:translate="Històric" class="column-center">Històric</th>
-                  <th i18n:translate="Ratificat" class="column-center">Ratificat</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tal:block repeat="carrecs_by_ens carrecs">
-                  <tal:block define="ens python:carrecs_by_ens[0]">
-                    <tr tal:repeat="carrec python:carrecs_by_ens[1]"
-                        tal:attributes="class python:'historic' if carrec.is_historic else ''">
-                      <td tal:content="ens"/>
-                      <td><a tal:content="carrec/Title"
-                             tal:attributes="href carrec/absolute_url"/>
-                      </td>
-                      <td tal:content="carrec/carrec"/>
-                      <td tal:content="python:carrec.data_inici and carrec.data_inici.strftime('%d/%m/%Y') or '-'"/>
-                      <td tal:content="carrec/vigencia"/>
-                      <td tal:content="python:carrec.data_fi and carrec.data_fi.strftime('%d/%m/%Y') or '-'"/>
-                      <td class="column-center">
-                        <input type="checkbox" class="hidable-group-element" disabled="disabled"
-                               tal:attributes="checked carrec/is_historic;"/>
-                      </td>
-                      <td class="column-center">
-                        <input type="checkbox" disabled="disabled"
-                               tal:attributes="checked carrec/nomenaments_anteriors;"/>
-                      </td>
-                    </tr>
-                  </tal:block>
-                </tal:block>
-              </tbody>
-              </table>
-            </tal:block>
-            <p tal:condition="not:carrecs">---</p>
-          </tal:block>
-          </section>
-        </tal:block>
-        <p tal:condition="not:organs">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Unitats UPC implicades">Unitats UPC implicades</h3>
-        <tal:block define="unitats view/unitats">
-          <table tal:condition="unitats" class="ens-taula">
-            <thead>
-              <tr>
-                <th i18n:translate="Unitat" class="column-medium">Unitat</th>
-                <th i18n:translate="Persona de referència" class="column-medium">Persona de referència</th>
-                <th i18n:translate="Observacions">Observacions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr tal:repeat="unitat unitats">
-                <td><a tal:content="unitat/title"
-                       tal:attributes="href unitat/absolute_url"/>
-                </td>
-                <td tal:content="python:unitat.persona or '-'"/>
-                <td tal:content="python:unitat.observacions or '-'"/>
-              </tr>
-            </tbody>
-          </table>
-          <p tal:condition="not:unitats">---</p>
-        </tal:block>
-        </div>
-        <h2 i18n:translate="Marc legal">Marc legal</h2>
-        <div>
-        <dl>
-          <dt i18n:translate="Data de constitució">Data de constitució</dt>
-          <dd tal:content="python:context.data_constitucio and context.data_constitucio.strftime('%d/%m/%Y') or '-'"/>
-
-          <dt i18n:translate="Data estatuts">Data estatuts</dt>
-          <dd tal:content="python:len(estatuts_vigents) > 0 and estatuts_vigents[0].data and estatuts_vigents[0].data.strftime('%d/%m/%Y') or '-'"/>
-
-          <dt i18n:translate="Entitats constituents">Entitats constituents</dt>
-          <dd tal:content="python:context.entitats_constituents or '-'"/>
-
-          <dt i18n:translate="Entitats actuals">Entitats actuals</dt>
-          <dd tal:content="python:context.entitats_actuals or '-'"/>
-
-          <dt i18n:translate="Data d&apos;alta UPC">Data d&apos;alta UPC</dt>
-          <dd tal:content="python:context.data_entrada and context.data_entrada.strftime('%d/%m/%Y') or '-'"/>
-
-          <dt i18n:translate="Acord d&apos;alta" class="subfield">Acord d&apos;alta</dt>
-          <dd tal:content="python:context.data_entrada_acord or '-'"/>
-
-          <dt i18n:translate="Procediment d&apos;alta" class="subfield">Procediment d&apos;alta</dt>
-          <dd tal:content="python:context.data_entrada_procediment or '-'"/>
-
-          <dt i18n:translate="Data de baixa UPC">Data de baixa UPC</dt>
-          <dd tal:content="python:context.data_baixa and context.data_baixa.strftime('%d/%m/%Y') or '-'"/>
-
-          <dt i18n:translate="Acord de baixa" class="subfield">Acord de baixa</dt>
-          <dd tal:content="python:context.data_baixa_acord or '-'"/>
-
-          <dt i18n:translate="Procediment de baixa" class="subfield">Procediment de baixa</dt>
-          <dd tal:content="python:context.data_baixa_procediment or '-'"/>
-
-          <dt i18n:translate="Adm. Pública d&apos;adscripció">Adm. Pública d&apos;adscripció</dt>
-          <dd tal:content="view/adscripcio"/>
-        </dl>
-
-        <h3 i18n:translate="Acords UPC">Acords UPC</h3>
-        <tal:block define="acords view/acords">
-        <table tal:condition="acords" class="ens-taula">
-          <thead>
-            <tr>
-              <th i18n:translate="Data" class="column-small">Data</th>
-              <th i18n:translate="Òrgan" class="column-medium">Òrgan</th>
-              <th i18n:translate="Descripció" class="column-medium">Descripció</th>
-              <th i18n:translate="Fitxer">Fitxer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr tal:repeat="acord acords">
-              <td tal:content="python:acord.data and acord.data.strftime('%d/%m/%Y') or '-'"/>
-              <td tal:content="python:acord.organ or '-'"/>
-              <td>
-                <a tal:attributes="href acord/absolute_url"
-                   tal:content="acord/title"/>
-              </td>
-              <td>
-                <a tal:condition="acord/fitxer"
-                   tal:attributes="href python:view.get_file_href(acord)"
-                   tal:content="acord/fitxer/filename"/>
-                <tal:block tal:condition="not:acord/fitxer" tal:content="string: -"/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p tal:condition="not:acords">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Documents públics">Documents públics</h3>
-        <tal:block define="escriptures view/escriptures">
-        <table tal:condition="escriptures" class="ens-taula">
-          <thead>
-            <tr>
-              <th i18n:translate="Data" class="column-small">Data</th>
-              <th i18n:translate="Descripció" class="column-medium">Descripció</th>
-              <th i18n:translate="Notari" class="column-medium">Notari</th>
-              <th i18n:translate="Fitxer">Fitxer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr tal:repeat="escriptura escriptures">
-              <td tal:content="python:escriptura.data and escriptura.data.strftime('%d/%m/%Y') or '-'"/>
-              <td>
-                <a tal:attributes="href escriptura/absolute_url"
-                   tal:content="escriptura/title"/>
-              </td>
-              <td tal:content="python:escriptura.notari or '-'"/>
-              <td>
-                <a tal:condition="escriptura/fitxer"
-                   tal:attributes="href python:view.get_file_href(escriptura)"
-                   tal:content="escriptura/fitxer/filename"/>
-                <tal:block tal:condition="not:escriptura/fitxer" tal:content="string: -"/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p tal:condition="not:escriptures">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Estatuts i normatives">Estatuts i normatives</h3>
-        <h4 i18n:translate="Vigents">Vigents</h4>
-        <tal:block>
-        <table tal:condition="estatuts_vigents" class="ens-taula">
-          <thead>
-            <tr>
-              <th i18n:translate="Data" class="column-small">Data</th>
-              <th i18n:translate="Descripció" class="column-medium">Descripció</th>
-              <th i18n:translate="Fitxer">Fitxer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr tal:repeat="estatut estatuts_vigents">
-              <td tal:content="python:estatut.data and estatut.data.strftime('%d/%m/%Y') or '-'"/>
-              <td>
-                <a tal:attributes="href estatut/absolute_url"
-                   tal:content="estatut/title"/>
-              </td>
-              <td>
-                <a tal:condition="estatut/fitxer"
-                   tal:attributes="href python:view.get_file_href(estatut)"
-                   tal:content="estatut/fitxer/filename"/>
-                <tal:block tal:condition="not:estatut/fitxer" tal:content="string: -"/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p tal:condition="not:estatuts_vigents">---</p>
-        </tal:block>
-        <h4 i18n:translate="Vigents">Anteriors</h4>
-        <tal:block define="estatuts_anteriors python:view.estatuts_historics">
-        <table tal:condition="estatuts_anteriors" class="ens-taula">
-          <thead>
-            <tr>
-              <th i18n:translate="Data" class="column-small">Data</th>
-              <th i18n:translate="Descripció" class="column-medium">Descripció</th>
-              <th i18n:translate="Fitxer">Fitxer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr tal:repeat="estatut estatuts_anteriors">
-              <td tal:content="python:estatut.data and estatut.data.strftime('%d/%m/%Y') or '-'"/>
-              <td>
-                <a tal:attributes="href estatut/absolute_url"
-                   tal:content="estatut/title"/>
-              </td>
-              <td>
-                <a tal:condition="estatut/fitxer"
-                   tal:attributes="href python:view.get_file_href(estatut)"
-                   tal:content="estatut/fitxer/filename"/>
-                <tal:block tal:condition="not:estatut/fitxer" tal:content="string: -"/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p tal:condition="not:estatuts_anteriors">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Reunions">Reunions</h3>
-        <a href="reunions" target="_blank">Accés reunions</a>
-
-        <h3 i18n:translate="Convenis">Convenis</h3>
-        <tal:block define="convenis view/convenis">
-        <table tal:condition="convenis" class="ens-taula">
-          <thead>
-            <tr>
-              <th i18n:translate="Data" class="column-small">Data</th>
-              <th i18n:translate="Descripció" class="column-medium">Descripció</th>
-              <th i18n:translate="Fitxer">Fitxer</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr tal:repeat="conveni convenis">
-              <td tal:content="python:conveni.data and conveni.data.strftime('%d/%m/%Y') or '-'"/>
-              <td>
-                <a tal:attributes="href conveni/absolute_url"
-                   tal:content="conveni/title"/>
-              </td>
-              <td>
-                <a tal:condition="conveni/fitxer"
-                   tal:attributes="href python:view.get_file_href(conveni)"
-                   tal:content="conveni/fitxer/filename"/>
-                <tal:block tal:condition="not:conveni/fitxer" tal:content="string: -"/>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p tal:condition="not:convenis">---</p>
-        </tal:block>
-
-        <h3 i18n:translate="Altres documents d&apos;interès">Altres documents d&apos;interès</h3>
-        <a href="altres-documents" target="_blank">Accés altres documents d&apos;interès</a>
-
-        <h3> Observacions </h3>
-
-            <tal:block define="observacions python:context.marc_legal_observacions">
-                <tal:co condition="observacions">
-                    <input type="checkbox"
-                           class="label-aligned selector-input-observacions"
-                           id="obs"/>
-                    <label i18n:translate="Mostra les observacions"
-                           for="obs">Mostra les observacions</label>
-                    <div class="observacions-content"
-                         style="display: none"
-                         tal:content="observacions">
-                        observaciones dades identificatives
-                    </div>
-                </tal:co>
-                <tal:co condition="not:observacions">
-                ---
-                </tal:co>
-            </tal:block>
-        </div>
-    </section>
-    <script type="text/javascript"
-            tal:attributes="src string:${portal_url}/++genweb++ens/jquery.hidable_group.js">
-    </script>
-    <script type="text/javascript"
-            tal:attributes="src string:${portal_url}/++genweb++ens/ens_view.js">
-    </script>
+          tal:attributes="src string:${context/absolute_url}/++theme++genweb6.ens/js/ens.min.js"></script>
 
 </metal:block>
 </metal:content-core>
 </body>
 </html>
-
-
-
-<div tal:define="categories context/Subject|nothing;
-                 url_quote  nocall:modules/Products.PythonScripts.standard/url_quote;"
-     tal:condition="categories">
-  <span tal:repeat="category categories">
-    <a href=""
-       class="link-category"
-       rel="tag"
-       tal:content="category"
-       tal:define="quotedCat python:url_quote(category)"
-       tal:attributes="href string:${context/@@plone_portal_state/navigation_root_url}/@@search?Subject%3Alist=${quotedCat}">
-      Category
-      </a><span class="separator" tal:condition="not:repeat/category/end">,</span>
-  </span>
-</div>

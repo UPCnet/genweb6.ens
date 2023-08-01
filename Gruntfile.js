@@ -37,7 +37,7 @@ module.exports = function (grunt) {
         uglify: {
             js: {
                 files: {
-                    'js/content/ens.min.js': '../content/ens/ens.js',
+                    'js/ens.min.js': '../content/ens/ens.js',
 
                     'js/carrec_search.min.js': 'js/carrec_search.js',
                     'js/carrec_searchresults.min.js': 'js/carrec_searchresults.js',

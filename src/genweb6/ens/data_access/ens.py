@@ -298,7 +298,7 @@ class EnsDataReporter(object):
             query['is_historic'] = is_historic
 
         return sorted(self.catalog.searchResults(query),
-                      key=lambda e: (e.carrec + e.Title.decode('utf-8')))
+                      key=lambda e: (e.carrec + e.Title))
 
     def list_carrecs_by_organ_grouped_by_ens_obj(self, organ,
                                                  is_historic=None):
@@ -341,7 +341,7 @@ class EnsDataReporter(object):
 
         # Append non-UPC carrecs grouped by their alphabetically sorted ens
         for ens, carrecs in sorted(
-                carrecs_by_ens.iteritems(), key=lambda e: e[0].lower()):
+                iter(carrecs_by_ens.items()), key=lambda e: e[0].lower()):
             carrecs_by_organ.append((ens, carrecs))
 
         return carrecs_by_organ
