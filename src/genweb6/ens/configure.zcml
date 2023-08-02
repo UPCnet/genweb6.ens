@@ -12,6 +12,7 @@
 
     <include package=".browser" />
     <include package=".content" />
+    <include package=".controlpanels" />
 
     <genericsetup:registerProfile
         name="default"

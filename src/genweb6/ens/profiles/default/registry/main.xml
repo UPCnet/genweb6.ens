@@ -1,6 +1,10 @@
 <?xml version="1.0"?>
 <registry
-    xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    i18n:domain="genweb6.ens">
+  xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  i18n:domain="genweb6.ens">
+
+  <records
+    interface="genweb6.ens.controlpanels.ens.IEnsSettings"
+    purge="False"/>
 
 </registry>

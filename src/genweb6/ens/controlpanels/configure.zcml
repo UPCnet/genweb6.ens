@@ -1,0 +1,14 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  xmlns:i18n="http://namespaces.zope.org/i18n"
+  i18n_domain="genweb6.ens">
+
+  <browser:page
+    name="ens-settings"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".ens.EnsSettingsControlPanel"
+    permission="cmf.ManagePortal"
+    />
+
+</configure>
