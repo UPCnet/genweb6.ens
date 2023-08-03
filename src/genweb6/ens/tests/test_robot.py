@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
-from genweb6.ens.testing import GENWEB6_ENS_ACCEPTANCE_TESTING  # noqa: E501
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
+
+from genweb6.ens.testing import GENWEB6_ENS_ACCEPTANCE_TESTING  # noqa: E501
 
 import os
 import robotsuite
