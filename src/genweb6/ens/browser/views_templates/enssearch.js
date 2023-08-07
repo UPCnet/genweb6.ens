@@ -1,7 +1,6 @@
-var ens_search_results_url = portal_url + '/ens_search_results/';
+var ens_search_results_url = $('body').attr('data-view-url') + '/ens_search_results/';
 
-function ens_search()
-{
+function ens_search(){
     var input_figura_juridica = $('#search_input_figura_juridica');
     var input_estat = $('#search_input_estat');
     var input_text = $('#search_input_text');
@@ -19,29 +18,32 @@ function ens_search()
     input_text.attr('disabled', 'disabled');
     input_carpetes.attr('disabled', 'disabled');
     button.attr('disabled', 'disabled');
+
     $.ajax({
         url: ens_search_results_url,
         data: {figura_juridica: figura_juridica, estat: estat,
                carpetes: JSON.stringify(carpetes), text: text},
-        success: function(data)
-        {
+        success: function(data){
             results.html(data);
             input_figura_juridica.removeAttr('disabled');
             input_estat.removeAttr('disabled');
             input_carpetes.removeAttr('disabled');
             input_text.removeAttr('disabled');
             button.removeAttr('disabled');
+
+            var monkeyList = new List('search_results', {
+                page: 10,
+                pagination: true
+            })
         }
     });
+
 }
 
-function apply_filter_to_link(link)
-{
-    link.click(function()
-    {
+function apply_filter_to_link(link){
+    link.click(function(){
         var carpetes = $('#search_input_carpetes').val();
-        if (carpetes != null)
-        {
+        if (carpetes != null){
             var base_url = link.attr('href').split('?')[0];
             var filter_url = base_url + '?carpetes=' + JSON.stringify(carpetes);
             window.location.href = filter_url;
@@ -50,18 +52,14 @@ function apply_filter_to_link(link)
     });
 }
 
-$(document).ready(function ()
-{
-    $('#search_input_text').on('keydown', function(event)
-    {
-        if (event.keyCode == 13)
-        {
+$(document).ready(function (){
+    $('#search_input_text').on('keydown', function(event){
+        if (event.keyCode == 13){
             ens_search();
         }
     });
 
-    $('#search_input_button').on('click', function(event)
-    {
+    $('#search_input_button').on('click', function(event){
         ens_search();
     });
 

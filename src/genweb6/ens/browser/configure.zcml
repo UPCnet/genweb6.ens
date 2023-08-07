@@ -4,8 +4,117 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="genweb6.ens">
 
-    <include file="viewlets.zcml" />
-    <include file="views.zcml" />
+    <browser:page
+        name="taula_representants_upc"
+        for="zope.interface.Interface"
+        class=".views.TaulaRepresentatsUpc"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/taularepresentantsupc.pt"
+        />
 
+    <browser:page
+        name="taula_representants_upc_csv"
+        for="zope.interface.Interface"
+        class=".views.TaulaRepresentatsUpcCsv"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        />
+
+    <browser:page
+        name="taula_dentitats"
+        for="zope.interface.Interface"
+        class=".views.TauladEntitats"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/tauladentitats.pt"
+        />
+
+    <browser:page
+        name="taula_dentitats_csv"
+        for="zope.interface.Interface"
+        class=".views.TauladEntitatsCsv"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        />
+
+    <browser:page
+        name="taula_representacio"
+        for="zope.interface.Interface"
+        class=".views.TaulaRepresentacio"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/taularepresentacio.pt"
+        />
+
+    <browser:page
+        name="taula_representacio_csv"
+        for="zope.interface.Interface"
+        class=".views.TaulaRepresentacioCsv"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        />
+
+    <browser:page
+        name="fix_carrec_representants"
+        for="zope.interface.Interface"
+        class=".views.FixCarrecRepresents"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="cmf.ManagePortal"
+        />
+
+    <browser:page
+        name="homepage"
+        for="plone.app.layout.navigation.interfaces.INavigationRoot"
+        class=".views.EnsSearch"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/enssearch.pt"
+        />
+
+    <browser:page
+        name="ens_search_results"
+        for="zope.interface.Interface"
+        class=".views.EnsSearchResults"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/enssearchresults.pt"
+        />
+
+    <browser:page
+        name="contenidor_ens_search"
+        for="genweb6.ens.content.contenidor_ens.contenidor_ens.IContenidorEns"
+        class=".views.EnsSearch"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/enssearch.pt"
+        />
+
+    <browser:page
+        name="contenidor_ens_search_results"
+        for="genweb6.ens.content.contenidor_ens.contenidor_ens.IContenidorEns"
+        class=".views.EnsSearchResults"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/enssearchresults.pt"
+        />
+
+    <browser:page
+        name="carrec_search"
+        for="zope.interface.Interface"
+        class=".views.CarrecSearch"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/carrecsearch.pt"
+        />
+
+    <browser:page
+        name="carrec_search_results"
+        for="zope.interface.Interface"
+        class=".views.CarrecSearchResults"
+        layer="..interfaces.IGenweb6EnsLayer"
+        permission="genweb.authenticated"
+        template="views_templates/carrecsearchresults.pt"
+        />
 
 </configure>

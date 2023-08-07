@@ -1,0 +1,59 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:metal="http://xml.zope.org/namespaces/metal"
+            xmlns:tal="http://xml.zope.org/namespaces/tal"
+            xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+            i18n:domain="genweb.ens"
+            metal:use-macro="context/main_template/macros/master">
+
+<body>
+  <metal:custom_title fill-slot="content-title">
+    <h1 class="documentFirstHeading" i18n:translate="Taula de representació">
+      Taula de representació
+    </h1>
+  </metal:custom_title>
+
+  <metal:content-core fill-slot="content-core">
+
+    <nav class="w-100 text-end mb-4">
+      <a class="btn btn-outline-dark"
+        tal:attributes="href view/export_url" i18n:translate="">
+          Exportar a format CSV
+      </a>
+    </nav>
+
+    <div class="table-responsive">
+      <table class="table gw-datatable table-striped table-hover">
+        <thead>
+          <tr class="table-dark">
+            <th class="align-middle" scope="col" i18n:translate="">Denominació</th>
+            <th class="align-middle" scope="col" i18n:translate="">Acrònim</th>
+            <th class="align-middle" scope="col" i18n:translate="">Òrgan</th>
+            <th class="align-middle" scope="col" i18n:translate="">Càrrec a l'òrgan</th>
+            <th class="align-middle" scope="col" i18n:translate="">Nom persona</th>
+            <th class="align-middle" scope="col" i18n:translate="">En qualitat de...</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data inici</th>
+            <th class="align-middle" scope="col" i18n:translate="">Vigència</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data fi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr tal:repeat="ens view/list">
+            <td class="denominacio">
+              <a tal:content="ens/denominacio" tal:attributes="href ens/absolute_url"/>
+            </td>
+            <td tal:content="ens/acronim"/>
+            <td tal:content="ens/organ"/>
+            <td tal:content="ens/carrec"/>
+            <td tal:content="ens/persona"/>
+            <td tal:content="ens/qualitat"/>
+            <td tal:content="ens/data_inici"/>
+            <td tal:content="ens/vigencia"/>
+            <td tal:content="ens/data_fi"/>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </metal:content-core>
+</body>
+</html>

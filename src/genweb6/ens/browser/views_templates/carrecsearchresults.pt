@@ -1,0 +1,60 @@
+<tal:block tal:define="results view/search;
+                       portal_url context/portal_url;"
+           tal:condition="results">
+
+  <div class="table-responsive">
+    <table class="table ens-datatable table-striped table-hover">
+      <thead>
+        <tr class="table-dark">
+          <th class="col-md-2 align-middle" scope="col" i18n:translate="">Nom</th>
+          <th class="col-md-2 align-middle" scope="col" i18n:translate="">En qualitat de...</th>
+          <th class="col-md-2 align-middle" scope="col" i18n:translate="">Ens</th>
+          <th class="col-md-1 align-middle" scope="col" i18n:translate="">Òrgan</th>
+          <th class="col-md-1 align-middle" scope="col" i18n:translate="">Càrrec a l'òrgan</th>
+          <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data inici</th>
+          <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Vigència</th>
+          <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data fi</th>
+          <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Històric</th>
+        </tr>
+      </thead>
+      <tbody id="results">
+        <tr tal:repeat="result results"
+            tal:attributes="class python: 'historic' if result.is_historic else ''">
+          <td>
+            <a target="_blank"
+               tal:attributes="href result/url"
+               tal:content="result/title"/>
+          </td>
+          <td tal:content="result/carrec_envirtud"/>
+          <td>
+            <a target="_blank"
+               tal:attributes="href result/ens_url"
+               tal:content="result/ens"/>
+          </td>
+          <td>
+            <a target="_blank"
+               tal:attributes="href result/organ_url"
+               tal:content="result/organ"/>
+          </td>
+          <td tal:content="result/carrec"/>
+          <td class="text-center"
+              tal:content="result/data_inici_str"/>
+          <td class="text-center"
+              tal:content="result/vigencia"/>
+          <td class="text-center"
+              tal:content="result/data_fi_str"/>
+          <td class="text-center">
+            <input type="checkbox" disabled="disabled"
+                   tal:attributes="checked result/is_historic"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p class="text-muted"
+     tal:condition="not:results" i18n:translate="">
+    No s'han trobat coincidències amb aquests criteris de cerca
+  </p>
+
+</tal:block>

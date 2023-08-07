@@ -105,14 +105,14 @@
             <p class="text-muted d-none notHistoric" i18n:translate="">(No hi ha càrrecs històrics)</p>
 
             <div class="table-responsive">
-              <table class="table table-hover">
+              <table class="table gw-datatable table-striped table-hover">
                 <thead>
                   <tr class="table-dark">
-                    <th class="col-md-4" scope="col" i18n:translate="">Nom</th>
-                    <th class="col-md-3" scope="col" i18n:translate="">Càrrec</th>
-                    <th class="col-md-2" scope="col" i18n:translate="">Telèfon</th>
-                    <th class="col-md-2" scope="col" i18n:translate="">Email</th>
-                    <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
+                    <th class="col-md-4 align-middle" scope="col" i18n:translate="">Nom</th>
+                    <th class="col-md-3 align-middle" scope="col" i18n:translate="">Càrrec</th>
+                    <th class="col-md-2 align-middle" scope="col" i18n:translate="">Telèfon</th>
+                    <th class="col-md-2 align-middle" scope="col" i18n:translate="">Email</th>
+                    <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Històric</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -126,9 +126,8 @@
                     <td tal:content="python:directiu.telefon or '-'"/>
                     <td tal:content="python:directiu.email or '-'"/>
                     <td class="text-center">
-                      <input type="checkbox"
-                             tal:attributes="checked directiu/is_historic;
-                                             disabled python:True"/>
+                      <input type="checkbox" disabled="disabled"
+                             tal:attributes="checked directiu/is_historic"/>
                     </td>
                   </tr>
                 </tbody>
@@ -143,13 +142,13 @@
               i18n:translate="">Persones de contacte</h3>
 
           <div class="table-responsive" tal:condition="contactes">
-            <table class="table table-hover">
+            <table class="table gw-datatable table-striped table-hover">
               <thead>
                 <tr class="table-dark">
-                  <th class="col-md-4" scope="col" i18n:translate="">Nom</th>
-                  <th class="col-md-3" scope="col" i18n:translate="">Càrrec</th>
-                  <th class="col-md-2" scope="col" i18n:translate="">Telèfon</th>
-                  <th class="col-md-3" scope="col" i18n:translate="">Email</th>
+                  <th class="col-md-4 align-middle" scope="col" i18n:translate="">Nom</th>
+                  <th class="col-md-3 align-middle" scope="col" i18n:translate="">Càrrec</th>
+                  <th class="col-md-2 align-middle" scope="col" i18n:translate="">Telèfon</th>
+                  <th class="col-md-3 align-middle" scope="col" i18n:translate="">Email</th>
                 </tr>
               </thead>
               <tbody>
@@ -364,17 +363,17 @@
                 <p class="text-muted d-none notHistoricCarrecOGParticipacio" i18n:translate="">(No hi ha càrrecs històrics)</p>
 
                 <div class="table-responsive">
-                  <table class="table table-hover">
+                  <table class="table gw-datatable table-striped table-hover">
                     <thead>
                       <tr class="table-dark">
-                        <th class="col-md-2" scope="col" i18n:translate="">Ens</th>
-                        <th class="col-md-3" scope="col" i18n:translate="">Nom</th>
-                        <th class="col-md-2" scope="col" i18n:translate="">Càrrec</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data inici</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Vigència</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data fi</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Ratificat</th>
+                        <th class="col-md-2 align-middle" scope="col" i18n:translate="">Ens</th>
+                        <th class="col-md-3 align-middle" scope="col" i18n:translate="">Nom</th>
+                        <th class="col-md-2 align-middle" scope="col" i18n:translate="">Càrrec</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data inici</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Vigència</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data fi</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Històric</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Ratificat</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -463,17 +462,17 @@
                 <p class="text-muted d-none notHistoricCarrecOGAssessorsParticipacio" i18n:translate="">(No hi ha càrrecs històrics)</p>
 
                 <div class="table-responsive">
-                  <table class="table table-hover">
+                  <table class="table gw-datatable table-striped table-hover">
                     <thead>
                       <tr class="table-dark">
-                        <th class="col-md-2" scope="col" i18n:translate="">Ens</th>
-                        <th class="col-md-3" scope="col" i18n:translate="">Nom</th>
-                        <th class="col-md-2" scope="col" i18n:translate="">Càrrec</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data inici</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Vigència</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Data fi</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Històric</th>
-                        <th class="col-md-1 text-center" scope="col" i18n:translate="">Ratificat</th>
+                        <th class="col-md-2 align-middle" scope="col" i18n:translate="">Ens</th>
+                        <th class="col-md-3 align-middle" scope="col" i18n:translate="">Nom</th>
+                        <th class="col-md-2 align-middle" scope="col" i18n:translate="">Càrrec</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data inici</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Vigència</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data fi</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Històric</th>
+                        <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Ratificat</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -518,13 +517,13 @@
           <h3 class="pb-2 border-bottom"
               i18n:translate="">Unitats UPC implicades</h3>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="unitats">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-3" scope="col" i18n:translate="">Unitat</th>
-                <th class="col-md-3" scope="col" i18n:translate="">Persona de referència</th>
-                <th class="col-md-6" scope="col" i18n:translate="">Observacions</th>
+                <th class="col-md-3 align-middle" scope="col" i18n:translate="">Unitat</th>
+                <th class="col-md-3 align-middle" scope="col" i18n:translate="">Persona de referència</th>
+                <th class="col-md-6 align-middle" scope="col" i18n:translate="">Observacions</th>
               </tr>
             </thead>
             <tbody>
@@ -609,14 +608,14 @@
           <h3 class="pb-2 border-bottom"
               i18n:translate="">Acords UPC</h3>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="acords">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
-                <th class="col-md-3" scope="col" i18n:translate="">Òrgan</th>
-                <th class="col-md-4" scope="col" i18n:translate="">Descripció</th>
-                <th class="col-md-4" scope="col" i18n:translate="">Fitxer</th>
+                <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-3 align-middle" scope="col" i18n:translate="">Òrgan</th>
+                <th class="col-md-4 align-middle" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-4 align-middle" scope="col" i18n:translate="">Fitxer</th>
               </tr>
             </thead>
             <tbody>
@@ -644,14 +643,14 @@
           <h3 class="pb-2 border-bottom"
               i18n:translate="">Documents públics</h3>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="escriptures">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
-                <th class="col-md-3" scope="col" i18n:translate="">Notari</th>
-                <th class="col-md-4" scope="col" i18n:translate="">Descripció</th>
-                <th class="col-md-4" scope="col" i18n:translate="">Fitxer</th>
+                <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-3 align-middle" scope="col" i18n:translate="">Notari</th>
+                <th class="col-md-4 align-middle" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-4 align-middle" scope="col" i18n:translate="">Fitxer</th>
               </tr>
             </thead>
             <tbody>
@@ -682,13 +681,13 @@
           <h4 class="pb-2"
               i18n:translate="">Vigents</h4>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="estatuts_vigents">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
-                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
-                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+                <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5 align-middle" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7 align-middle" scope="col" i18n:translate="">Fitxer</th>
               </tr>
             </thead>
             <tbody>
@@ -715,13 +714,13 @@
           <h4 class="pb-2"
               i18n:translate="">Anteriors</h4>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="estatuts_anteriors">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
-                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
-                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+                <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5 align-middle" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7 align-middle" scope="col" i18n:translate="">Fitxer</th>
               </tr>
             </thead>
             <tbody>
@@ -754,13 +753,13 @@
           <h3 class="pb-2 border-bottom"
               i18n:translate="">Convenis</h3>
 
-          <table class="table table-hover"
+          <table class="table gw-datatable table-striped table-hover"
                  tal:condition="convenis">
             <thead>
               <tr class="table-dark">
-                <th class="col-md-1 text-center" scope="col" i18n:translate="">Data</th>
-                <th class="col-md-5" scope="col" i18n:translate="">Descripció</th>
-                <th class="col-md-7" scope="col" i18n:translate="">Fitxer</th>
+                <th class="col-md-1 align-middle text-center" scope="col" i18n:translate="">Data</th>
+                <th class="col-md-5 align-middle" scope="col" i18n:translate="">Descripció</th>
+                <th class="col-md-7 align-middle" scope="col" i18n:translate="">Fitxer</th>
               </tr>
             </thead>
             <tbody>

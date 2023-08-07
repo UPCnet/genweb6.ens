@@ -1,0 +1,30 @@
+<tal:block tal:define="results view/search;
+                       portal_url context/portal_url;">
+
+  <ul id="results" class="list list-group list-group-flush"
+      tal:condition="results">
+
+    <li class="list-group-item d-flex justify-content-between align-items-start"
+        tal:repeat="result results">
+
+      <div class="me-auto">
+
+        <div class="fw-bold" tal:content="result/acronim">Subheading</div>
+
+        <a tal:attributes="href python: result.url" tal:content="python: result.title"/>
+
+      </div>
+
+    </li>
+
+  </ul>
+
+  <ul class="pagination"
+      tal:condition="results"></ul>
+
+  <p class="text-muted"
+     tal:condition="not:results" i18n:translate="">
+    No s'han trobat coincidències amb aquests criteris de cerca
+  </p>
+
+</tal:block>

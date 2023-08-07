@@ -58,13 +58,13 @@ class TestCarrecSearch(FunctionalTestCase):
                                 ens_number, organ_type, organ_num,
                                 carrec_num, persona_num, is_historic=True)
                             folder_1_titles_nonhistorics.append(
-                                carrec_nonhistoric.title.encode('utf-8'))
+                                carrec_nonhistoric.title)
                             folder_1_titles_historics.append(
-                                carrec_historic.title.encode('utf-8'))
+                                carrec_historic.title)
                             folder_1_titles_all.append(
-                                carrec_nonhistoric.title.encode('utf-8'))
+                                carrec_nonhistoric.title)
                             folder_1_titles_all.append(
-                                carrec_historic.title.encode('utf-8'))
+                                carrec_historic.title)
 
         folder_2 = fixtures.create_content(self.portal, fixtures.folder_2)
         folder_2_titles_all = []
@@ -80,7 +80,7 @@ class TestCarrecSearch(FunctionalTestCase):
                                 ens_number, organ_type, organ_num,
                                 carrec_num, persona_num)
                             folder_2_titles_all.append(
-                                carrec.title.encode('utf-8'))
+                                carrec.title)
         commit()
 
         view = api.content.get_view('carrec_search_results',

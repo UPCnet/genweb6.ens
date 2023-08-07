@@ -104,9 +104,9 @@ class TestEnsSearch(FunctionalTestCase):
                                '')))
 
         self.assertAppearInOrder(
-            [ens.title.encode('utf-8') for ens in ens_list[:4]],
+            [ens.title for ens in ens_list[:4]],
             self.browser.contents)
-        for title in [ens.title.encode('utf-8') for ens in ens_list[4:]]:
+        for title in [ens.title for ens in ens_list[4:]]:
             self.assertNotIn(title, self.browser.contents)
 
         # Test filtering by figura jurídica and estat
@@ -118,9 +118,9 @@ class TestEnsSearch(FunctionalTestCase):
                                '')))
 
         self.assertAppearInOrder(
-            [ens.title.encode('utf-8') for ens in ens_list[:2]],
+            [ens.title for ens in ens_list[:2]],
             self.browser.contents)
-        for title in [ens.title.encode('utf-8') for ens in ens_list[2:]]:
+        for title in [ens.title for ens in ens_list[2:]]:
             self.assertNotIn(title, self.browser.contents)
 
         # Test filtering by figura jurídica, estat and text
@@ -132,9 +132,9 @@ class TestEnsSearch(FunctionalTestCase):
                                'desc-a')))
 
         self.assertAppearInOrder(
-            [ens.title.encode('utf-8') for ens in ens_list[:1]],
+            [ens.title for ens in ens_list[:1]],
             self.browser.contents)
-        for title in [ens.title.encode('utf-8') for ens in ens_list[1:]]:
+        for title in [ens.title for ens in ens_list[1:]]:
             self.assertNotIn(title, self.browser.contents)
 
         # Test that carrecs in folder-2 are shown in alphabetical order
@@ -144,6 +144,6 @@ class TestEnsSearch(FunctionalTestCase):
                            self.get_query_string('', '', folder_list, '')))
 
         self.assertIn(
-            ens_list[-1].title.encode('utf-8'), self.browser.contents)
-        for title in [ens.title.encode('utf-8') for ens in ens_list[:-1]]:
+            ens_list[-1].title, self.browser.contents)
+        for title in [ens.title for ens in ens_list[:-1]]:
             self.assertNotIn(title, self.browser.contents)

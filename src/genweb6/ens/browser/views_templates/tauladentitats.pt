@@ -1,0 +1,111 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:metal="http://xml.zope.org/namespaces/metal"
+            xmlns:tal="http://xml.zope.org/namespaces/tal"
+            xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+            i18n:domain="genweb.ens"
+            metal:use-macro="context/main_template/macros/master">
+
+<body>
+  <metal:custom_title fill-slot="content-title">
+    <h1 class="documentFirstHeading" i18n:translate="Taula d'entitats">
+      Taula d'entitats
+    </h1>
+  </metal:custom_title>
+
+  <metal:content-core fill-slot="content-core">
+
+    <nav class="w-100 text-end mb-4">
+      <a class="btn btn-outline-dark"
+        tal:attributes="href view/export_url" i18n:translate="">
+          Exportar a format CSV
+      </a>
+    </nav>
+
+    <div class="table-responsive">
+      <table class="table gw-datatable table-striped table-hover">
+        <thead>
+          <tr class="table-dark">
+            <!--  Dades identificatives -->
+            <th class="align-middle" scope="col" i18n:translate="">Denominació</th>
+            <th class="align-middle" scope="col" i18n:translate="">Acrònim</th>
+            <th class="align-middle" scope="col" i18n:translate="">Estat</th>
+            <th class="align-middle" scope="col" i18n:translate="">NIF</th>
+            <th class="align-middle" scope="col" i18n:translate="">Àmbit institucional</th>
+            <th class="align-middle" scope="col" i18n:translate="">Figura jurídica</th>
+            <th class="align-middle" scope="col" i18n:translate="">Identificadors</th>
+            <th class="align-middle" scope="col" i18n:translate="">Web</th>
+            <th class="align-middle" scope="col" i18n:translate="">Tipologia UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Codi UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Núm. UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Etiquetes</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data alta UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data baixa UPC</th>
+            <!--  Participació -->
+            <th class="align-middle" scope="col" i18n:translate="">Fons patrimonial (data)</th>
+            <th class="align-middle" scope="col" i18n:translate="">Cap. inicial total</th>
+            <th class="align-middle" scope="col" i18n:translate="">Aportació inicial UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">% UPC en capital</th>
+            <th class="align-middle" scope="col" i18n:translate="">% UPC en vots</th>
+            <th class="align-middle" scope="col" i18n:translate="">Quota</th>
+            <!--  Marc legal -->
+            <th class="align-middle" scope="col" i18n:translate="">Entitats constituents</th>
+            <th class="align-middle" scope="col" i18n:translate="">Entitats actuals</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data de constitució</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data alta UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Acord UPC</th>
+            <th class="align-middle" scope="col" i18n:translate="">Adscripció</th>
+            <th class="align-middle" scope="col" i18n:translate="">Data estatuts</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr tal:repeat="ens view/list">
+            <!--  Dades identificatives -->
+            <td class="denominacio">
+              <a tal:content="ens/title" tal:attributes="href ens/absolute_url">Denominació</a>
+            </td>
+            <td tal:content="ens/acronim">Acrònim</td>
+            <td i18n:translate="" tal:content="ens/estat">Estat</td>
+            <td tal:content="ens/nif">NIF</td>
+            <td i18n:translate="" tal:content="ens/institution_type">Àmbit institucional</td>
+            <td tal:content="ens/figura_juridica">Figura jurídica</td>
+            <td tal:content="ens/numero_identificacio">Identificadors</td>
+            <td>
+              <a tal:content="ens/web" tal:attributes="href ens/web">Web</a>
+            </td>
+            <td tal:content="ens/tipologia_upc">Tipologia UPC</td>
+            <td tal:content="ens/codi">Codi REP</td>
+            <td tal:content="ens/num_ens">Núm.</td>
+            <td>
+              <div tal:define="ens_tags python: view.getTags(ens)"
+                  tal:condition="ens_tags">
+                  <tal:rep tal:repeat="tag ens_tags">
+                      <a href="#" tal:attributes="href tag/tag_url" tal:content="tag/tag_name" />
+                      <span class="separator" tal:condition="not: repeat/tag/end">,</span>
+                  </tal:rep>
+              </div>
+            </td>
+            <td tal:content="ens/data_entrada">Data alta UPC</td>
+            <td tal:content="ens/data_baixa">Data baixa UPC</td>
+            <!--  Participació -->
+            <td tal:content="ens/capital_social">Fons patrimonial (data)</td>
+            <td tal:content="ens/aportacio_total">Cap. inicial total</td>
+            <td tal:content="ens/aportacio_import">Aportació inicial UPC</td>
+            <td tal:content="ens/percentatge_participacio">% UPC en capital</td>
+            <td tal:content="ens/percentatge_membres">% UPC en vots</td>
+            <td tal:content="ens/quota">Quota</td>
+            <!--  Marc legal -->
+            <td tal:content="ens/entitats_constituents">Entitats constituents</td>
+            <td tal:content="ens/entitats_actuals">Entitats actuals</td>
+            <td tal:content="ens/data_constitucio">Data de constitució</td>
+            <td tal:content="ens/data_entrada">Data alta UPC</td>
+            <td tal:content="ens/data_entrada_acord">Acord UPC</td>
+            <td tal:content="ens/adscripcio">Adscripció</td>
+            <td tal:content="ens/data_estatuts">Data estatuts</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </metal:content-core>
+</body>
+</html>

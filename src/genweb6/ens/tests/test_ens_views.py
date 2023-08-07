@@ -69,67 +69,67 @@ class TestEnsViews(FunctionalTestCase):
 
         self.assertAppearInOrder([
             "<dt>Denominació</dt>",
-            "<dd>{0}</dd>".format(ens.title.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.title),
             "<dt>Acrònim</dt>",
-            "<dd>{0}</dd>".format(ens.acronim.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.acronim),
             "<dt>Objecte social</dt>",
             '<dd class="fieldset-end">{0}</dd>'.format(
-                ens.objecte_social.encode('utf-8')),
+                ens.objecte_social),
             "<dt>Estat</dt>",
-            "<dd>{0}</dd>".format(ens.estat.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.estat),
             "<dt>NIF</dt>",
-            "<dd>{0}</dd>".format(ens.nif.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.nif),
             '<dt>Figura jurídica</dt>',
             "<dd>{0}</dd>".format(
-                ens.figura_juridica.encode('utf-8')),
+                ens.figura_juridica),
             '<dt class="subfield">Núm. Identif.</dt>',
             '<dd class="fieldset-end">{0}</dd>'.format(
-                ens.numero_identificacio.encode('utf-8')),
+                ens.numero_identificacio),
             "<dt>Domicili social (població)</dt>",
             "<dd>{0}</dd>".format(
-                ens.domicili_social_poblacio.encode('utf-8')),
+                ens.domicili_social_poblacio),
             "<dt>Domicili social (adreça)</dt>",
-            "<dd>{0}</dd>".format(ens.domicili_social_adreca.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.domicili_social_adreca),
             "<dt>Adreça 2</dt>",
-            "<dd>{0}</dd>".format(ens.adreca_2.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.adreca_2),
             "<dt>Telèfon</dt>",
-            "<dd>{0}</dd>".format(ens.telefon.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.telefon),
             "<dt>Fax</dt>",
-            "<dd>{0}</dd>".format(ens.fax.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.fax),
             "<dt>Web</dt>",
             '<dd class="fieldset-end">{0}</dd>'.format(
-                ens.web.encode('utf-8')),
+                ens.web),
             "<dt>Tipologia UPC</dt>",
-            "<dd>{0}</dd>".format(ens.tipologia_upc.encode('utf-8')),
+            "<dd>{0}</dd>".format(ens.tipologia_upc),
             "<dt>Codi UPC</dt>",
-            '<dd>{0}</dd>'.format(ens.codi.encode('utf-8')),
+            '<dd>{0}</dd>'.format(ens.codi),
             "<dt>Etiquetes</dt>",
             '<dd class="fieldset-end">{0}</dd>'.format(
-                ens.etiquetes.encode('utf-8')),
+                ens.etiquetes),
             ], self.browser.contents)
 
         self.assertIn("<h3>Càrrecs directius</h3>", self.browser.contents)
 
         for directiu in (directiu_1, directiu_2):
-            self.assertIn(directiu.title.encode('utf-8'),
+            self.assertIn(directiu.title,
                           self.browser.contents)
-            self.assertIn(directiu.carrec.encode('utf-8'),
+            self.assertIn(directiu.carrec,
                           self.browser.contents)
-            self.assertIn(directiu.telefon.encode('utf-8'),
+            self.assertIn(directiu.telefon,
                           self.browser.contents)
-            self.assertIn(directiu.email.encode('utf-8'),
+            self.assertIn(directiu.email,
                           self.browser.contents)
 
         self.assertIn("<h3>Persones de contacte</h3>", self.browser.contents)
 
         for contacte in (contacte_1, contacte_2):
-            self.assertIn(contacte.title.encode('utf-8'),
+            self.assertIn(contacte.title,
                           self.browser.contents)
-            self.assertIn(contacte.carrec.encode('utf-8'),
+            self.assertIn(contacte.carrec,
                           self.browser.contents)
-            self.assertIn(contacte.telefon.encode('utf-8'),
+            self.assertIn(contacte.telefon,
                           self.browser.contents)
-            self.assertIn(contacte.email.encode('utf-8'),
+            self.assertIn(contacte.email,
                           self.browser.contents)
 
         self.assertIn("<dt>Aportació inicial</dt>", self.browser.contents)
@@ -139,7 +139,7 @@ class TestEnsViews(FunctionalTestCase):
         self.assertIn("<dd>253.44 €/mes</dd>", self.browser.contents)
 
         self.assertIn("<dt>Unitat de càrrec</dt>", self.browser.contents)
-        self.assertIn("<dd>{0}</dd>".format(ens.unitat_carrec.encode('utf-8')),
+        self.assertIn("<dd>{0}</dd>".format(ens.unitat_carrec),
                       self.browser.contents)
 
         self.assertIn("<dt>Percentatge de participació</dt>",
@@ -149,7 +149,7 @@ class TestEnsViews(FunctionalTestCase):
         self.assertIn("<dt>Membres UPC als òrgans de govern</dt>",
                       self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.nombre_membres.encode('utf-8')),
+            ens.nombre_membres),
             self.browser.contents)
 
         self.assertIn("<dt>Part. en cap. social o fons patrimonial</dt>",
@@ -157,36 +157,36 @@ class TestEnsViews(FunctionalTestCase):
         self.assertIn("<dd>2,000.00 EUR</dd>", self.browser.contents)
 
         self.assertAppearInOrder([
-            organ_2.title.encode('utf-8') + u" (Històric)".encode('utf-8'),
-            organ_3.title.encode('utf-8'),
-            organ_1.title.encode('utf-8'),
-            organ_5.title.encode('utf-8'),
-            organ_4.title.encode('utf-8'),
-            organ_6.title.encode('utf-8')],
+            organ_2.title + u" (Històric)",
+            organ_3.title,
+            organ_1.title,
+            organ_5.title,
+            organ_4.title,
+            organ_6.title],
             self.browser.contents)
 
         self.assertAppearsBefore(
             "<h3>Òrgans de govern</h3>",
-            organ_1.title.encode('utf-8'),
+            organ_1.title,
             self.browser.contents)
 
         self.assertAppearInOrder([
-            carrec_1.title.encode('utf-8'),
-            carrec_2.title.encode('utf-8'),
-            carrec_4.title.encode('utf-8'),
-            carrec_3.title.encode('utf-8'),
-            carrec_5.title.encode('utf-8')],
+            carrec_1.title,
+            carrec_2.title,
+            carrec_4.title,
+            carrec_3.title,
+            carrec_5.title],
             self.browser.contents)
 
         self.assertAppearsBefore(
             "<h3>Òrgans assessors</h3>",
-            organ_4.title.encode('utf-8'),
+            organ_4.title,
             self.browser.contents)
 
         self.assertAppearInOrder([
             "<h3>Unitats UPC implicades</h3>",
-            unitat_2.title.encode('utf-8'),
-            unitat_1.title.encode('utf-8')],
+            unitat_2.title,
+            unitat_1.title],
             self.browser.contents)
 
         self.assertIn("<dt>Data de constitució</dt>", self.browser.contents)
@@ -194,11 +194,11 @@ class TestEnsViews(FunctionalTestCase):
 
         self.assertIn("<dt>Entitats constituents</dt>", self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.entitats_constituents.encode('utf-8')), self.browser.contents)
+            ens.entitats_constituents), self.browser.contents)
 
         self.assertIn("<dt>Entitats actuals</dt>", self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.entitats_actuals.encode('utf-8')), self.browser.contents)
+            ens.entitats_actuals), self.browser.contents)
 
         self.assertIn("<dt>Data d&apos;entrada UPC</dt>",
                       self.browser.contents)
@@ -207,51 +207,51 @@ class TestEnsViews(FunctionalTestCase):
         self.assertIn('<dt class="subfield">Procediment d&apos;entrada</dt>',
                       self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.data_entrada_procediment.encode('utf-8')),
+            ens.data_entrada_procediment),
             self.browser.contents)
 
         self.assertIn("<dt>Seu social</dt>", self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.seu_social.encode('utf-8')), self.browser.contents)
+            ens.seu_social), self.browser.contents)
 
         self.assertIn("<dt>Adm. Pública d&apos;adscripció</dt>",
                       self.browser.contents)
         self.assertIn("<dd>{0}</dd>".format(
-            ens.adscripcio.encode('utf-8')), self.browser.contents)
+            ens.adscripcio), self.browser.contents)
 
         self.assertAppearInOrder([
             "<h3>Acords UPC</h3>",
-            acord_1.title.encode('utf-8'),
-            acord_4.title.encode('utf-8'),
-            acord_2.title.encode('utf-8'),
-            acord_3.title.encode('utf-8')],
+            acord_1.title,
+            acord_4.title,
+            acord_2.title,
+            acord_3.title],
             self.browser.contents)
 
         self.assertAppearInOrder([
             "<h3>Documents públics</h3>",
-            escriptura_4.title.encode('utf-8'),
-            escriptura_1.title.encode('utf-8'),
-            escriptura_2.title.encode('utf-8'),
-            escriptura_3.title.encode('utf-8')],
+            escriptura_4.title,
+            escriptura_1.title,
+            escriptura_2.title,
+            escriptura_3.title],
             self.browser.contents)
 
         self.assertAppearInOrder([
             "<h3>Estatuts i normatives</h3>",
             "<h4>Vigents</h4>",
-            estatut_2.title.encode('utf-8'),
-            estatut_3.title.encode('utf-8'),
-            estatut_1.title.encode('utf-8'),
+            estatut_2.title,
+            estatut_3.title,
+            estatut_1.title,
             "<h4>Anteriors</h4>",
-            estatut_4.title.encode('utf-8'),
-            estatut_6.title.encode('utf-8'),
-            estatut_5.title.encode('utf-8')],
+            estatut_4.title,
+            estatut_6.title,
+            estatut_5.title],
             self.browser.contents)
 
         self.assertAppearInOrder([
             "<h3>Convenis</h3>",
-            conveni_3.title.encode('utf-8'),
-            conveni_1.title.encode('utf-8'),
-            conveni_2.title.encode('utf-8')],
+            conveni_3.title,
+            conveni_1.title,
+            conveni_2.title],
             self.browser.contents)
 
         self.assertIn(

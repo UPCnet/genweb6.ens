@@ -34,7 +34,7 @@ def get_vocabulary_representants_upc(context):
         token="persones"))
     vocabulary_terms += [
         SimpleTerm(title=" - " + prettify_representant(
-                   representant).encode('utf-8'),
+                   representant),
                    value=prettify_representant(representant),
                    token=representant.id)
         for representant in reporter.list_representants('persones')]

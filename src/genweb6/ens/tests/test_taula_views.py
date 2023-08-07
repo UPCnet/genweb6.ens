@@ -52,19 +52,19 @@ class TestTaulaViews(FunctionalTestCase):
                            self.get_folders_query_string(folder_list)))
 
         self.assertAppearInOrder([
-            ens_1.title.encode('utf8'),
-            ens_2.title.encode('utf8')],
+            ens_1.title,
+            ens_2.title],
             self.browser.contents)
-        self.assertNotIn(ens_3.title.encode('utf-8'), self.browser.contents)
+        self.assertNotIn(ens_3.title, self.browser.contents)
 
         # Test that ens in folder-2 are shown in alphabetical order
         folder_list = [folder_2]
         self.browser.open((view.url() +
                            self.get_folders_query_string(folder_list)))
 
-        self.assertIn(ens_3.title.encode('utf8'), self.browser.contents)
-        self.assertNotIn(ens_1.title.encode('utf-8'), self.browser.contents)
-        self.assertNotIn(ens_2.title.encode('utf-8'), self.browser.contents)
+        self.assertIn(ens_3.title, self.browser.contents)
+        self.assertNotIn(ens_1.title, self.browser.contents)
+        self.assertNotIn(ens_2.title, self.browser.contents)
 
         # Test that ens in both foler-1 and folder-2 are shown in alphabetical
         # order
@@ -72,20 +72,20 @@ class TestTaulaViews(FunctionalTestCase):
         self.browser.open((view.url() +
                            self.get_folders_query_string(folder_list)))
 
-        self.assertIn(ens_3.title.encode('utf8'), self.browser.contents)
+        self.assertIn(ens_3.title, self.browser.contents)
         self.assertAppearInOrder([
-            ens_3.title.encode('utf8'),
-            ens_1.title.encode('utf8'),
-            ens_2.title.encode('utf8')],
+            ens_3.title,
+            ens_1.title,
+            ens_2.title],
             self.browser.contents)
 
         # Test that ens in all folders are shown in alphabetical order if no
         # folder is specified
         self.browser.open(view.url())
         self.assertAppearInOrder([
-            ens_3.title.encode('utf8'),
-            ens_1.title.encode('utf8'),
-            ens_2.title.encode('utf8')],
+            ens_3.title,
+            ens_1.title,
+            ens_2.title],
             self.browser.contents)
 
         # Test that no ens are shown if a nonexistent folder is specified
@@ -94,9 +94,9 @@ class TestTaulaViews(FunctionalTestCase):
 
         self.browser.open((view.url() +
                            self.get_folders_query_string(folder_list)))
-        self.assertNotIn(ens_1.title.encode('utf-8'), self.browser.contents)
-        self.assertNotIn(ens_2.title.encode('utf-8'), self.browser.contents)
-        self.assertNotIn(ens_3.title.encode('utf-8'), self.browser.contents)
+        self.assertNotIn(ens_1.title, self.browser.contents)
+        self.assertNotIn(ens_2.title, self.browser.contents)
+        self.assertNotIn(ens_3.title, self.browser.contents)
 
     def test_taula_representacio(self):
         folder_1 = fixtures.create_content(self.portal, fixtures.folder_1)
@@ -117,7 +117,7 @@ class TestTaulaViews(FunctionalTestCase):
                                 ens_number, organ_type, organ_num,
                                 carrec_num, persona_num, is_historic=True)
                             folder_1_titles.append(
-                                carrec.title.encode('utf-8'))
+                                carrec.title)
 
         folder_2 = fixtures.create_content(self.portal, fixtures.folder_2)
         folder_2_titles = []
@@ -133,7 +133,7 @@ class TestTaulaViews(FunctionalTestCase):
                                 ens_number, organ_type, organ_num,
                                 carrec_num, persona_num)
                             folder_2_titles.append(
-                                carrec.title.encode('utf-8'))
+                                carrec.title)
         commit()
 
         view = api.content.get_view('taula_representacio',

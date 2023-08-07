@@ -38,15 +38,8 @@ module.exports = function (grunt) {
             js: {
                 files: {
                     'js/ens.min.js': '../content/ens/ens.js',
-
-                    'js/carrec_search.min.js': 'js/carrec_search.js',
-                    'js/carrec_searchresults.min.js': 'js/carrec_searchresults.js',
-                    'js/ens_search.min.js': 'js/ens_search.js',
-                    'js/ens_view.min.js': 'js/ens_view.js',
-                    'js/jquery.hidable_group.min.js': 'js/jquery.hidable_group.js',
-                    'js/jquery.paginated.min.js': 'js/jquery.paginated.js',
-                    'js/quickfix-datepickers.min.js': 'js/quickfix-datepickers.js',
-                    // js/jquery.twbsPagination.min.js
+                    'js/carrecsearch.min.js': '../browser/views_templates/carrecsearch.js',
+                    'js/enssearch.min.js': '../browser/views_templates/enssearch.js',
                 }
             }
         },

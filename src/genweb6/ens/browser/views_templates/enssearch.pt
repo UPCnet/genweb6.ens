@@ -1,0 +1,136 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+            xmlns:metal="http://xml.zope.org/namespaces/metal"
+            xmlns:tal="http://xml.zope.org/namespaces/tal"
+            xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+            i18n:domain="genweb.ens"
+            metal:use-macro="context/main_template/macros/master">
+
+<body>
+  <metal:custom_title fill-slot="content-title">
+    <h1 class="documentFirstHeading" i18n:translate="Inici">Inici</h1>
+  </metal:custom_title>
+
+  <metal:content-core fill-slot="content-core">
+
+    <nav class="mb-3 w-100">
+
+      <a class="btn btn-primary me-3" id="link_taula_dentitats"
+         tal:attributes="href string:${portal_url}/taula_dentitats"
+         i18n:translate="">
+        Taula d'entitats
+      </a>
+
+      <a class="btn btn-primary me-3" id="link_taula_representacio"
+         tal:attributes="href string:${portal_url}/taula_representacio"
+         i18n:translate="">
+        Taula de representació
+      </a>
+
+      <a class="btn btn-primary" id="link_colleccions"
+         tal:attributes="href string:${portal_url}/ca/col-leccions"
+         i18n:translate="">
+        Col·leccions
+      </a>
+
+    </nav>
+
+    <nav class="mb-4 w-100">
+
+      <a class="btn btn-primary me-3"
+         tal:attributes="href string:${portal_url}/ca/administrar-persones"
+         i18n:translate="">
+        Administrar persones
+      </a>
+
+      <a class="btn btn-primary"
+         tal:attributes="href string:${portal_url}/carrec_search"
+         i18n:translate="">
+        Cercador de càrrecs
+      </a>
+
+    </nav>
+
+    <div class="border bg-light p-5 mb-3">
+
+      <div class="input-group mb-3">
+
+        <label class="col-md-3 fw-bold" for="search_input_figura_juridica"
+               i18n:translate="">Figura jurídica</label>
+
+        <select class="form-select" id="search_input_figura_juridica"
+                aria-label="Figura jurídica">
+
+          <option tal:repeat="option view/figura_juridica_vocabulary"
+                  tal:attributes="value python: option[0]; selected python: not option[0]"
+                  tal:content="python: option[1]"></option>
+
+        </select>
+
+      </div>
+
+      <div class="input-group mb-3">
+
+        <label class="col-md-3 fw-bold" for="search_input_estat"
+               i18n:translate="">Estat</label>
+
+        <select class="form-select" id="search_input_estat"
+                aria-label="Estat">
+
+          <option tal:repeat="option view/estat_vocabulary"
+                  tal:attributes="value python: option[0]; selected python: not option[0]"
+                  tal:content="python: option[1]"></option>
+
+        </select>
+
+      </div>
+
+      <div class="input-group mb-3">
+
+        <label class="col-md-3 fw-bold" for="search_input_carpetes"
+               i18n:translate="">Cercar solament en</label>
+
+        <select id="search_input_carpetes" class="form-select"
+                multiple="multiple">
+
+          <option tal:repeat="option view/carpetes_vocabulary"
+                  tal:attributes="value python: option[0]; selected python: option[2]"
+                  tal:content="python: option[1]"></option>
+
+        </select>
+
+      </div>
+
+      <div class="input-group mb-3">
+
+        <label class="col-md-3 fw-bold" for="search_input_text"
+               i18n:translate="">Amb el text</label>
+
+        <input type="email" class="form-control"
+               id="search_input_text" placeholder="Introduïu el text"
+               i18n:attributes="placeholder">
+
+      </div>
+
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+
+        <input id="search_input_button" type="button"
+               value="Cerca" class="btn btn-primary col-md-9"
+               i18n:attributes="value">
+
+      </div>
+
+    </div>
+
+    <section>
+      <div id="search_results" class="ens-search-results"></div>
+    </section>
+
+    <script type="text/javascript"
+            tal:attributes="src string:${context/absolute_url}/++theme++genweb6.ens/js/list.min.js"></script>
+
+    <script type="text/javascript"
+            tal:attributes="src string:${context/absolute_url}/++theme++genweb6.ens/js/enssearch.min.js"></script>
+
+  </metal:content-core>
+</body>
+</html>
