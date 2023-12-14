@@ -2,11 +2,45 @@ Changelog
 =========
 
 
-1.1 (unreleased)
+1.1 (2023-12-14)
 ----------------
 
-- Nothing changed yet.
-
+* Fix grunt issues [Ruben Padilla Mateu]
+* Merge pull request #2 from UPCnet/dependabot/npm_and_yarn/json5-2.2.3 [ruben-padilla-ithinkupc]
+*  [ruben-padilla-ithinkupc]
+* Bump json5 from 2.2.1 to 2.2.3 [ruben-padilla-ithinkupc]
+* Bump json5 from 2.2.1 to 2.2.3 [dependabot[bot]]
+*  [dependabot[bot]]
+* Bumps [json5](https://github.com/json5/json5) from 2.2.1 to 2.2.3. [dependabot[bot]]
+* - [Release notes](https://github.com/json5/json5/releases) [dependabot[bot]]
+* - [Changelog](https://github.com/json5/json5/blob/main/CHANGELOG.md) [dependabot[bot]]
+* - [Commits](https://github.com/json5/json5/compare/v2.2.1...v2.2.3) [dependabot[bot]]
+*  [dependabot[bot]]
+* --- [dependabot[bot]]
+* updated-dependencies: [dependabot[bot]]
+* - dependency-name: json5 [dependabot[bot]]
+* dependency-type: indirect [dependabot[bot]]
+* ... [dependabot[bot]]
+*  [dependabot[bot]]
+* Signed-off-by: dependabot[bot] <support@github.com> [dependabot[bot]]
+* Merge pull request #1 from UPCnet/dependabot/npm_and_yarn/semver-5.7.2 [ruben-padilla-ithinkupc]
+*  [ruben-padilla-ithinkupc]
+* Bump semver from 4.3.6 to 5.7.2 [ruben-padilla-ithinkupc]
+* Bump semver from 4.3.6 to 5.7.2 [dependabot[bot]]
+*  [dependabot[bot]]
+* Bumps [semver](https://github.com/npm/node-semver) from 4.3.6 to 5.7.2. [dependabot[bot]]
+* - [Release notes](https://github.com/npm/node-semver/releases) [dependabot[bot]]
+* - [Changelog](https://github.com/npm/node-semver/blob/v5.7.2/CHANGELOG.md) [dependabot[bot]]
+* - [Commits](https://github.com/npm/node-semver/compare/v4.3.6...v5.7.2) [dependabot[bot]]
+*  [dependabot[bot]]
+* --- [dependabot[bot]]
+* updated-dependencies: [dependabot[bot]]
+* - dependency-name: semver [dependabot[bot]]
+* dependency-type: indirect [dependabot[bot]]
+* ... [dependabot[bot]]
+*  [dependabot[bot]]
+* Signed-off-by: dependabot[bot] <support@github.com> [dependabot[bot]]
+* [FIX] Grunt issues [Ruben Padilla Mateu]
 
 1.0 (2023-09-12)
 ----------------
