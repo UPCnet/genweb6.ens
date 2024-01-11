@@ -2,6 +2,7 @@
 
 from plone.app.dexterity import textindexer
 from plone.dexterity.content import Container
+from plone.dexterity.interfaces import IDexteritySchema
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
@@ -17,7 +18,7 @@ def get_vocabulary(values):
         for token, value in enumerate(values)])
 
 
-class IOrgan(model.Schema):
+class IOrgan(model.Schema, IDexteritySchema):
     """
     Òrgan de govern associat a un ens.
     """

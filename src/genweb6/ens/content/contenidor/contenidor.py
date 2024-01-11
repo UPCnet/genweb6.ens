@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 
 from plone.app.dexterity import textindexer
+from plone.dexterity.interfaces import IDexteritySchema
 from plone.supermodel import model
 from zope import schema
 
 from genweb6.ens import _
 
 
-class IContenidor(model.Schema):
+class IContenidor(model.Schema, IDexteritySchema):
     textindexer.searchable('title')
     title = schema.TextLine(
         title=_(u"Nom"),

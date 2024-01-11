@@ -2,6 +2,7 @@
 
 from plone.app.dexterity import textindexer
 from plone.dexterity.content import Container
+from plone.dexterity.interfaces import IDexteritySchema
 from plone.supermodel import model
 from zope import schema
 from zope.interface import implementer
@@ -9,7 +10,7 @@ from zope.interface import implementer
 from genweb6.ens import _
 
 
-class ICarrec(model.Schema):
+class ICarrec(model.Schema, IDexteritySchema):
     """
     Càrrec associat a un òrgan d'un ens.
     """

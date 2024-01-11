@@ -7,6 +7,7 @@ from plone.app.dexterity import textindexer
 from plone.autoform import directives
 from plone.dexterity.content import Container
 from plone.dexterity.content import Item
+from plone.dexterity.interfaces import IDexteritySchema
 from plone.supermodel import model
 from z3c.form.browser.radio import RadioFieldWidget
 from zope import schema
@@ -42,7 +43,7 @@ institution_type_values = [
     u"Altres CCAA"]
 
 
-class IEns(model.Schema):
+class IEns(model.Schema, IDexteritySchema):
     """
     Organització com ara una universitat o una empresa.
     """
