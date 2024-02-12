@@ -2,6 +2,8 @@
 from Products.statusmessages.interfaces import IStatusMessage
 
 from plone.app.registry.browser import controlpanel
+from plone.autoform.directives import read_permission
+from plone.autoform.directives import write_permission
 from plone.dexterity.interfaces import IDexteritySchema
 from plone.supermodel import model
 from z3c.form import button
@@ -41,7 +43,20 @@ class IEnsSettings(model.Schema, IDexteritySchema):
         required=False,
     )
 
+    model.fieldset(
+        'Migracio',
+        _(u'Migracio'),
+        fields=['enable_suscribers'])
 
+    # MIGRACIO
+
+    read_permission(enable_suscribers='genweb.webmaster')
+    write_permission(enable_suscribers='genweb.manager')
+    enable_suscribers = schema.Bool(
+        title=_(u'Habilitar notificacions'),
+        required=False,
+        default=False,
+    )
 class EnsSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = IEnsSettings

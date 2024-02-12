@@ -6,7 +6,7 @@ from plone.dexterity.utils import createContentInContainer
 
 from genweb6.ens.indicators.updating import update as update_indicators
 from genweb6.ens.indicators.updating import update_if_review_state as update_indicators_if_review_state
-
+from genweb6.ens.utils import genwebEnsConfig
 
 def create_folder(container, id, title, addable_types):
     folder = createContentInContainer(
@@ -22,6 +22,11 @@ def create_folder(container, id, title, addable_types):
 
 
 def initialize_ens(ens, event):
+
+    ens_tool = genwebEnsConfig()
+    if not ens_tool.enable_suscribers:
+        return
+
     create_folder(
         ens,
         "altres-documents",
@@ -36,8 +41,18 @@ def initialize_ens(ens, event):
 
 
 def update_indicators_on_ens_deletion(obj, event):
+
+    ens_tool = genwebEnsConfig()
+    if not ens_tool.enable_suscribers:
+        return
+
     update_indicators_if_review_state(obj, ('intranet', 'published'))
 
 
 def update_indicators_on_ens_review_state_change(obj, event):
+
+    ens_tool = genwebEnsConfig()
+    if not ens_tool.enable_suscribers:
+        return
+
     update_indicators(context=obj)

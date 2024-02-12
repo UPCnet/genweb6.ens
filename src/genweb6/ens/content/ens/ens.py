@@ -40,7 +40,8 @@ institution_type_values = [
     _(u"Autonòmica"),
     u"Local",
     u"Internacional",
-    u"Altres CCAA"]
+    u"Altres CCAA",
+    u"-"]
 
 
 class IEns(model.Schema, IDexteritySchema):
@@ -452,7 +453,7 @@ def get_data_participacio(ens):
 def get_aportacio_total(ens):
     if ens.aportacio_total:
         moneda = "" if ens.aportacio_total_moneda is None \
-                 else " " + ens.aportacio_total_moneda.encode("utf-8")
+                 else " " + ens.aportacio_total_moneda
         return "{0:,.2f}{1}".format(
             ens.aportacio_total, moneda)
     else:
@@ -462,7 +463,7 @@ def get_aportacio_total(ens):
 def get_aportacio(ens):
     if ens.aportacio_import:
         moneda = "" if ens.aportacio_moneda is None \
-                 else " " + ens.aportacio_moneda.encode("utf-8")
+                 else " " + ens.aportacio_moneda
         return "{0:,.2f}{1}".format(
             ens.aportacio_import, moneda)
     else:
@@ -472,7 +473,7 @@ def get_aportacio(ens):
 def get_quota(ens):
     if ens.quota_import:
         moneda = "" if ens.quota_moneda is None \
-            else " " + ens.quota_moneda.encode("utf-8")
+            else " " + ens.quota_moneda
         return "{0:,.2f}{1}".format(
             ens.quota_import, moneda)
     else:
@@ -482,7 +483,7 @@ def get_quota(ens):
 def get_capital_social(ens):
     if ens.capital_social_import:
         moneda = "" if ens.capital_social_moneda is None \
-            else " " + ens.capital_social_moneda.encode("utf-8")
+            else " " + ens.capital_social_moneda
         return "{0:,.2f}{1}".format(
             ens.capital_social_import, moneda)
     else:

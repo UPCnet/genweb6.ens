@@ -1,9 +1,9 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:i18n="http://namespaces.zope.org/i18n"
-    i18n_domain="genweb">
+    i18n_domain="genweb6.ens">
 
-    <!-- <subscriber
+    <subscriber
         for="genweb6.ens.content.ens.ens.IEns
              zope.lifecycleevent.interfaces.IObjectCreatedEvent"
         handler=".subscribers.initialize_ens"
@@ -19,6 +19,6 @@
         for="genweb6.ens.content.ens.ens.IEns
              Products.CMFCore.interfaces.IActionSucceededEvent"
         handler=".subscribers.update_indicators_on_ens_review_state_change"
-        /> -->
+        />
 
 </configure>
