@@ -2,11 +2,10 @@ Changelog
 =========
 
 
-1.3 (unreleased)
+1.3 (2024-02-13)
 ----------------
 
-- Nothing changed yet.
-
+* Preparar paquete para migrar y solucionar errores [Pilar Marinas]
 
 1.2 (2024-01-12)
 ----------------
