@@ -33,7 +33,7 @@
         <!-- <element value="plone.app.referenceablebehavior.referenceable.IReferenceable" /> -->
     </property>
 
-    <property name="default_view">contenidor_ens_search</property>
+    <property name="default_view">view</property>
     <property name="default_view_fallback">False</property>
     <property name="view_methods">
         <element value="view" />
