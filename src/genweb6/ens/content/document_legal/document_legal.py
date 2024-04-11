@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from plone.app.dexterity import textindexer
+from plone.dexterity.interfaces import IDexteritySchema
 from plone.namedfile.field import NamedBlobFile
 from plone.supermodel import model
 from zope import schema
@@ -8,7 +9,7 @@ from zope import schema
 from genweb6.ens import _
 
 
-class IDocumentLegal(model.Schema):
+class IDocumentLegal(model.Schema, IDexteritySchema):
     """
     Document legal
     """

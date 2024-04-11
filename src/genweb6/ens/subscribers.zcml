@@ -5,7 +5,7 @@
 
     <subscriber
         for="genweb6.ens.content.ens.ens.IEns
-             zope.lifecycleevent.interfaces.IObjectCreatedEvent"
+             zope.lifecycleevent.interfaces.IObjectAddedEvent"
         handler=".subscribers.initialize_ens"
         />
 

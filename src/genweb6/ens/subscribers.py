@@ -31,13 +31,13 @@ def initialize_ens(ens, event):
         ens,
         "altres-documents",
         "Altres documents",
-        ('Document', 'File', 'Folder', 'Image', 'genweb6.ens.document_interes'))
+        ('Document', 'File', 'Folder', 'Image', 'genweb.ens.document_interes'))
 
     create_folder(
         ens,
         "reunions",
         "Reunions",
-        ('Document', 'File', 'Folder', 'Image', 'genweb6.ens.acta_reunio'))
+        ('Document', 'File', 'Folder', 'Image', 'genweb.ens.acta_reunio'))
 
 
 def update_indicators_on_ens_deletion(obj, event):
