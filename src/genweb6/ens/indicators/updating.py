@@ -27,10 +27,6 @@ def update(context):
 
 
 def update_after_commit_hook(is_commit_successful, context):
-    ens_tool = genwebEnsConfig()
-    if not ens_tool.enable_suscribers:
-        return
-
     if not is_commit_successful:
         return
     try:

@@ -43,20 +43,7 @@ class IEnsSettings(model.Schema, IDexteritySchema):
         required=False,
     )
 
-    model.fieldset(
-        'Migracio',
-        _(u'Migracio'),
-        fields=['enable_suscribers'])
 
-    # MIGRACIO
-
-    read_permission(enable_suscribers='genweb.webmaster')
-    write_permission(enable_suscribers='genweb.manager')
-    enable_suscribers = schema.Bool(
-        title=_(u'Habilitar notificacions'),
-        required=False,
-        default=False,
-    )
 class EnsSettingsEditForm(controlpanel.RegistryEditForm):
 
     schema = IEnsSettings
