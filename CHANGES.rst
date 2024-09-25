@@ -2,11 +2,11 @@ Changelog
 =========
 
 
-1.5 (unreleased)
+1.5 (2024-09-25)
 ----------------
 
-- Nothing changed yet.
-
+* [UPD] Quitar enable_suscribers [Iago López]
+* [FIX] Solucionar error al crear contenido genweb.ens.ens [Iago López]
 
 1.4 (2024-03-12)
 ----------------
