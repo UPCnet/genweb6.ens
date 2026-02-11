@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='genweb6.ens',
-    version='1.6.dev0',
+    version='1.6',
     description="Genweb 6 ENS package",
     long_description=long_description,
     # Get more from https://pypi.org/classifiers/
