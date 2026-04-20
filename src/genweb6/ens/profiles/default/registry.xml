@@ -15,4 +15,108 @@
 
   </records>
 
+  <!-- folder_contents (pat-structure): plone.icon.contenttype mas portal type normalizado -->
+  <record name="plone.icon.contenttype/genweb-ens-acord">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS acord</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-acta_reunio">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS acta reunió</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-carrec">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS càrrec</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/person.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-carrec_upc">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS càrrec UPC</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/person.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-contenidor_ens">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS contenidor</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/folder.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-contenidor_representants">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS contenidor representants</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/folder.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-conveni">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS conveni</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-document_interes">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS document interès</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-documentacio">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS documentació</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-ens">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS entitat</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/building.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-escriptura_publica">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS escriptura pública</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-estatut">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS estatut</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/file-text.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-organ">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS òrgan</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/journals.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-persona_contacte">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS persona contacte</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/person.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-persona_directiu">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS persona directiu</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/person.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-representant">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS representant</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/person.svg</value>
+  </record>
+  <record name="plone.icon.contenttype/genweb-ens-unitat">
+    <field type="plone.registry.field.TextLine">
+      <title>ENS unitat</title>
+    </field>
+    <value key="resource">++plone++bootstrap-icons/building.svg</value>
+  </record>
+
 </registry>
