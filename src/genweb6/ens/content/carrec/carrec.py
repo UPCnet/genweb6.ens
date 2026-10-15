@@ -10,6 +10,14 @@ from zope.interface import implementer
 from genweb6.ens import _
 
 
+try:
+    from plone.app.dexterity.config import MAX_DESCRIPTION_LENGTH
+    from plone.app.dexterity.config import MAX_TITLE_LENGTH
+except ImportError:  # plone.app.dexterity < 3.2.3
+    MAX_TITLE_LENGTH = 1024
+    MAX_DESCRIPTION_LENGTH = 10000
+
+
 class ICarrec(model.Schema, IDexteritySchema):
     """
     Càrrec associat a un òrgan d'un ens.
@@ -22,6 +30,7 @@ class ICarrec(model.Schema, IDexteritySchema):
 
     textindexer.searchable('title')
     title = schema.TextLine(
+        max_length=MAX_TITLE_LENGTH,
         title=_(u"Cognoms i nom"),
         required=True)
 

@@ -8,8 +8,17 @@ from genweb6.ens import _
 from genweb6.ens.content.persona_contacte.persona_contacte import IPersonaContacte
 
 
+try:
+    from plone.app.dexterity.config import MAX_DESCRIPTION_LENGTH
+    from plone.app.dexterity.config import MAX_TITLE_LENGTH
+except ImportError:  # plone.app.dexterity < 3.2.3
+    MAX_TITLE_LENGTH = 1024
+    MAX_DESCRIPTION_LENGTH = 10000
+
+
 class IPersonaDirectiu(IPersonaContacte):
     description = schema.Text(
+        max_length=MAX_DESCRIPTION_LENGTH,
         title=_(u"Descripció"),
         required=False)
 
